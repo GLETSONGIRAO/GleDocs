@@ -1,3 +1,63 @@
 site_name: GleDocs
 theme:
+  logo: assets/logo.png
   name: material
+  features:
+    - navigation.expand
+    - header.autohide
+    - content.tabs.link
+
+  palette:
+    primary: deep purple
+    accent: indigo
+
+  font:
+    text: Source Sans Pro
+    code: Source Code Pro
+
+nav:
+    - Home: index.md
+    - Conda: Conda.md
+    - Flask: Flask.md
+    - MachineLearning: "Machine Learning For Software Enginners.md"
+    - Mkdocs: Mkdocs.md
+
+plugins:
+  - search:
+      lang: pt
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/GLETSONGIRAO
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/gletsonbarreto
+    - icon: fontawesome/brands/instagram
+      link: https://linkedin.com/in/gletsonbarreto 
+
+  generator: false
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - attr_list
+  - md_in_html
+  - pymdownx.tabbed:
+      alternate_style: true
+      
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  
+  - toc:
+      permalink: true
+      title: Tabela de Conteúdos
+      toc_depth: 3
+
+extra_css:
+  - stylesheets/extra.css
