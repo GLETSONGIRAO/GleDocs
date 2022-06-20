@@ -1,0 +1,36 @@
+.md-typeset h1, .md-typeset h2 {
+    letter-spacing: -.01em;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.md-typeset h1 {
+    font-weight: 300;
+    color: #6A5ACD;
+}
+
+.md-typeset h2 {
+    font-weight: 300;
+    color: #191970;
+}
+
+
+h3 {
+    color: #4B0082;
+    font-family: 'Source Sans Pro', sans-serif;
+  }  
+
+.md-grid {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75rem;
+}
+
+.md-typeset code {
+    color: #c7254e;
+    background-color: #65494910;
+    border-radius: 4px;
+    padding: 2px 4px;
+    font-size: 90%;
+    font-weight: 1000;
+
+}
