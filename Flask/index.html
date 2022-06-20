@@ -1,0 +1,1019 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.6">
+    
+    
+      
+        <title>Flask - GleDocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4a0965b7.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introducao" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="GleDocs" class="md-header__button md-logo" aria-label="GleDocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GleDocs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Flask
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="GleDocs" class="md-nav__button md-logo" aria-label="GleDocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    GleDocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Glet Docs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Conda/" class="md-nav__link">
+        Criando um enviroment
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Flask
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Flask
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features-do-flask" class="md-nav__link">
+    Features do Flask
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#micro-framework" class="md-nav__link">
+    Micro-framework
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Machine%20Learning%20For%20Software%20Enginners/" class="md-nav__link">
+        7 Passos do Machine Learning
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features-do-flask" class="md-nav__link">
+    Features do Flask
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#micro-framework" class="md-nav__link">
+    Micro-framework
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<div class="toc">
+<ul>
+<li><a href="#introducao">Introdução</a><ul>
+<li><a href="#features-do-flask">Features do Flask</a></li>
+<li><a href="#micro-framework">Micro-framework</a></li>
+</ul>
+</li>
+<li><a href="#o-modelo-arquitetural-cliente-servidor">O Modelo Arquitetural Cliente-Servidor</a><ul>
+<li><a href="#comunicacao-cliente-servidor">Comunicação cliente servidor</a></li>
+<li><a href="#uma-aplicacao-flask-como-um-servidor">Uma aplicação Flask como um servidor</a></li>
+</ul>
+</li>
+<li><a href="#arquitetura-model-template-view-mtv">Arquitetura Model-Template-View (MTV)</a><ul>
+<li><a href="#componentes-da-arquitetura-mvc">Componentes da Arquitetura MVC</a></li>
+<li><a href="#mtv">MTV</a></li>
+</ul>
+</li>
+<li><a href="#wsgi-e-jinja2">WSGI e Jinja2</a><ul>
+<li><a href="#web-server-gateway-interface-wsgi">Web Server Gateway Interface (WSGI)</a></li>
+<li><a href="#a-linguagem-de-template-jinja">A linguagem de template Jinja</a></li>
+</ul>
+</li>
+<li><a href="#hello-world">Hello World!</a><ul>
+<li><a href="#passo-1-importando-modulos">Passo 1: Importando Módulos</a></li>
+<li><a href="#passo-2-criando-um-objeto-flask">Passo 2: Criando um objeto Flask</a></li>
+<li><a href="#passo-3-executar-a-aplicacao-em-main">Passo 3: Executar a aplicação em main</a></li>
+<li><a href="#passo-4-criar-uma-funcao-view">Passo 4: Criar uma função view</a></li>
+<li><a href="#passo-5-atribuir-uma-rota-url">Passo 5: Atribuir uma rota URL</a></li>
+<li><a href="#implementacao-completa">Implementação completa</a></li>
+</ul>
+</li>
+<li><a href="#rotas-url-e-views">Rotas URL e Views</a><ul>
+<li><a href="#o-decorator-route">O decorator route()</a></li>
+<li><a href="#static-routing">Static Routing</a><ul>
+<li><a href="#um-exemplo-usando-rotas-url-estaticas">Um Exemplo usando rotas URL estáticas</a></li>
+</ul>
+</li>
+<li><a href="#dynamic-routing">Dynamic Routing</a><ul>
+<li><a href="#variable-rules">Variable Rules</a></li>
+<li><a href="#exemplo-usando-rules-variaveis">Exemplo usando rules variáveis</a></li>
+</ul>
+</li>
+<li><a href="#converter">Converter</a></li>
+</ul>
+</li>
+<li><a href="#como-usar-templates-html">Como usar Templates HTML</a><ul>
+<li><a href="#templates-estaticos">Templates Estáticos</a></li>
+<li><a href="#renderizando-templates-html">Renderizando templates HTML</a><ul>
+<li><a href="#uma-string">Uma String</a></li>
+<li><a href="#funcao-render_template">Função render_template</a></li>
+</ul>
+</li>
+<li><a href="#estrategias-de-estrutura-de-arquivos">Estratégias de estrutura de arquivos</a><ul>
+<li><a href="#estrutura-de-arquivos-em-modulo">Estrutura de arquivos em módulo</a></li>
+<li><a href="#estrutura-de-arquivo-em-pacotes">Estrutura de arquivo em pacotes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#arquivos-estaticos">Arquivos Estáticos</a></li>
+<li><a href="#como-servimos-arquivos-estaticos">Como Servimos Arquivos Estáticos?</a><ul>
+<li><a href="#passos-para-servir-arquivos-estaticos">Passos para servir Arquivos Estáticos</a><ul>
+<li><a href="#criar-um-diretorio-static">Criar um diretório \static</a></li>
+<li><a href="#criar-uma-url-para-arquivos-estaticos">Criar uma URL para arquivos estáticos</a></li>
+<li><a href="#funcao-url_for">Função url_for()</a></li>
+<li><a href="#exemplo">Exemplo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#templates-dinamicos">Templates Dinâmicos</a><ul>
+<li><a href="#templates-jinja2">Templates Jinja2</a><ul>
+<li><a href="#a-engine-de-template-jinja">A Engine de Template Jinja</a></li>
+<li><a href="#delimitadores">Delimitadores</a></li>
+<li><a href="#variaveis">Variáveis</a></li>
+<li><a href="#fluxo-de-controle-com-jinja">Fluxo de controle com Jinja</a><ul>
+<li><a href="#loops">Loops</a></li>
+<li><a href="#condicionais">Condicionais</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#template-inheritance">Template Inheritance</a><ul>
+<li><a href="#blocks">Blocks</a><ul>
+<li><a href="#basehtml">base.html</a></li>
+<li><a href="#homehtml">home.html</a></li>
+<li><a href="#abouthtml">about.html</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#forms">Forms</a><ul>
+<li><a href="#utilizando-request">Utilizando Request</a></li>
+<li><a href="#data-handling-usando-objeto-request">Data Handling usando objeto Request</a><ul>
+<li><a href="#recebendo-o-tipo-de-method-de-request">Recebendo o tipo de method de request.</a></li>
+<li><a href="#recebendo-form-data-de-request">Recebendo Form data de request</a></li>
+<li><a href="#exemplo-com-logica-de-validacao">Exemplo com Lógica de Validação</a></li>
+</ul>
+</li>
+<li><a href="#criando-formularios-usando-flask-wtf-e-wtforms">Criando Formulários usando Flask-WTF e WTForms</a></li>
+<li><a href="#renderizando-formularios-flask-wtf-em-templates">Renderizando formulários Flask-WTF em templates</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p style='color:#FFFFFF;background:#333333;text-shadow:#FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;color: #FFFFFF;background: #333333;text-align: center; width: 35%; margin: auto; padding: 15px; font-size: 20px'>
+Aprendendo Flask
+</p>
+
+<h1 id="introducao">Introdução</h1>
+<p>Flask é um framework de desenvolvimento web desenvolvido em Python. É fácil de aprender e de usar. "Begginer-friendly" porque não usa códigos que devem ser sempre copiados ou dependências, o que pode distrair da função primária da aplicação.</p>
+<h2 id="features-do-flask">Features do Flask</h2>
+<ol>
+<li>Fornece um <strong>servidor de desenvolvimento</strong> e um <strong>debugger.</strong></li>
+<li>Usa templates <strong>Jinja2.</strong></li>
+<li>Compatível com <strong>WSGI 1.0.</strong></li>
+<li>Fornece suporte integrado para <strong>testes unitários.</strong></li>
+<li>Muitas extensões disponíveis.</li>
+</ol>
+<h2 id="micro-framework">Micro-framework</h2>
+<p>Oposto a fullstack framework, que também oferecem módulos adicionais features como autenticação, banco de dados ORM, validação de input e sanitização, etc...</p>
+<p>Flask é conhecido como um micro-framework porque é leve e apenas fornece componentes que são essenciais, como <strong>routing, request, handling, sessions</strong>. Para outras funcionalidades o desenvolvedor deve escrever módulos customizados ou usar uma extensão. Essa abordagem evita boilerplate code.</p>
+<h1 id="o-modelo-arquitetural-cliente-servidor">O Modelo Arquitetural Cliente-Servidor</h1>
+<p><strong>Cliente</strong>: Enviar requisição para os servidores e enviar de volta os dados necessários.</p>
+<p><strong>Servidor</strong>: Espera por requisições dos clientes e responde a elas. O servidor responde a essas requisições e envia a informação que o cliente pediu.</p>
+<h3 id="comunicacao-cliente-servidor">Comunicação cliente servidor</h3>
+<p>Através de múltiplos protocolos diferentes. Em nosso contexto, <strong>HTTP</strong> ou <strong>HTTPS</strong> são usados.</p>
+<p><strong>Métodos HTTP:</strong></p>
+<ul>
+<li><code>GET</code></li>
+<li><code>POST</code></li>
+<li><code>PUT</code></li>
+<li><code>DELETE</code></li>
+</ul>
+<h2 id="uma-aplicacao-flask-como-um-servidor">Uma aplicação Flask como um servidor</h2>
+<p>A aplicação Flask aqui será do lado servidor. o Browser agirá como cliente mandando requisições para nossa aplicação web. Então a aplicação enviará a resposta apropriada.</p>
+<h1 id="arquitetura-model-template-view-mtv">Arquitetura Model-Template-View (MTV)</h1>
+<p>A arquitetura <strong>MTV</strong> é uma variação da arquitetura do <strong>MVC</strong> (<strong>Model-View-Controler</strong>).</p>
+<p>A arquitetura <strong>MVC</strong> é um <em>padrão arquitetural de software</em> no qual a lógica da aplicação é dividida em 3 componentes na base da funcionalidade:</p>
+<ul>
+<li><strong>Models</strong></li>
+<li><strong>Views</strong></li>
+<li><strong>Controllers</strong></li>
+</ul>
+<p>É usado não apenas para aplicações Desktop como também para Web e Mobile.</p>
+<h3 id="componentes-da-arquitetura-mvc">Componentes da Arquitetura <strong>MVC</strong></h3>
+<ol>
+<li><strong>Models</strong></li>
+</ol>
+<p>Models representam como os dados são armazenados no banco de dados. Contém todas as definições de dados para a aplicação (o schema).</p>
+<ol>
+<li><strong>Views</strong></li>
+</ol>
+<p><strong>Views</strong> são componentes que são visíveis ao usuário, como um output ou um Graphical User Interface (GUI).</p>
+<ol>
+<li><strong>Controllers</strong></li>
+</ol>
+<p><strong>Controllers</strong> são componentes que agem como uma interface entre <strong>models</strong> e <strong>views</strong>. O controller interpreta as interações do usuário (inputs) e executa tarefas nos models antes de retornar os dados apropriados através dos views.</p>
+<p><img src="C:\Users\glets\AppData\Roaming\Typora\typora-user-images\image-20220617114633121.png" alt="image-20220617114633121" style="zoom:80%;" /></p>
+<h3 id="mtv">MTV</h3>
+<p>A arquitetura <strong>MTV</strong> é uma leve variação da <strong>MVC</strong>. Por si só, Flask é um micro framwork e não contém suporte built-in para nenhum framework arquitetural. Entretanto, programadores que usam Flask têm a arquitetura MTV porque outro framework de desenvolvimento web baseado em Python, chamado <strong>Django</strong> a introduziu. Abaixo, uma comparação grosseira entre MVC e MTV:</p>
+<p><img src="C:\Users\glets\AppData\Roaming\Typora\typora-user-images\image-20220617115158956.png" alt="image-20220617115158956" style="zoom: 67%;" /></p>
+<h1 id="wsgi-e-jinja2">WSGI e Jinja2</h1>
+<h2 id="web-server-gateway-interface-wsgi">Web Server Gateway Interface (WSGI)</h2>
+<p><strong>WSGI</strong> é um padrão que descreve as especificações concernentes à comunicação entre um servidor web e uma aplicação cliente. Os detalhes desse padrão estão presentes na PEP33.</p>
+<p><strong>Alguns benefícios do WSGI:</strong></p>
+<ul>
+<li><strong>Flexibilidade</strong> com os componentes da aplicação.</li>
+<li><strong>Interoperabilidade</strong> entre diferentes frameworks Python.</li>
+<li><strong>Escalabilidade</strong> da aplicação com o aumento de usuários.</li>
+<li><strong>Eficiência</strong> em termos de velocidade de desenvolvimento.</li>
+</ul>
+<p>Não precisamos nos preocupar com detalhes internos do WSGI porque o modulo Flask lida com isso.</p>
+<h2 id="a-linguagem-de-template-jinja">A linguagem de template Jinja</h2>
+<p><strong>Jinja</strong> é uma linguagem de template usada em Python.</p>
+<p>Podemos renderizar conteúdo dinâmico em HTML usando Jinja.</p>
+<h1 id="hello-world">Hello World!</h1>
+<p>A aplicação mais simples em Flask pode ser feita usando apenas um script. Chamaremos de <code>app.py</code>. O programa será dividido em passos.</p>
+<h2 id="passo-1-importando-modulos">Passo 1: Importando Módulos</h2>
+<p>Para essa aplicação, precisamos apenas do módulo Flask da biblioteca flask.</p>
+<pre><code class="language-python">from flask import Flask
+</code></pre>
+<h2 id="passo-2-criando-um-objeto-flask">Passo 2: Criando um objeto Flask</h2>
+<p>Precisamos criar um objeto com o modulo importado Flask. Esse objeto será nossa aplicação <strong>WSGI</strong> chamada <code>app</code>.</p>
+<pre><code class="language-python">app = Flask(__name__)
+</code></pre>
+<h2 id="passo-3-executar-a-aplicacao-em-main">Passo 3: Executar a aplicação em main</h2>
+<p>Para executar a aplicação, chamaremos a função <code>run()</code> do nosso objeto app.</p>
+<pre><code class="language-python">if __name__ == &quot;__main__&quot;:
+    app.run()
+</code></pre>
+<h2 id="passo-4-criar-uma-funcao-view">Passo 4: Criar uma função view</h2>
+<p>Antes de rodar a aplicação, precisamos dizer à aplicação para mostrar algo como saída no browser. Então, criamos uma função chamada <code>hello()</code> que retorna a string "Hello World!". A saída retornada desta função será mostrada no browser.</p>
+<pre><code>def hello():
+    return &quot;Hello World&quot;;
+</code></pre>
+<h2 id="passo-5-atribuir-uma-rota-url">Passo 5: Atribuir uma rota URL</h2>
+<p>Finalmente, precisamos dizer ao app Flask quando chamar a função view <code>hello()</code>. Para este propósito, criaremos uma rota URL. Uma rota URL é associada a cada função view. Essa associação é criada usando o <strong>decorator</strong> <code>route()</code> antes de cada função view.</p>
+<pre><code class="language-python">@app.route(&quot;/&quot;)
+def hello():
+    return &quot;Hello World!&quot;;
+</code></pre>
+<h2 id="implementacao-completa">Implementação completa</h2>
+<pre><code class="language-python">from flask import Flask
+app = Flask(__name__)
+@app.route(&quot;/&quot;)
+def hello():
+    return &quot;Hello World!&quot;;
+
+if __name__ == &quot;__main__&quot;:
+    app.run(debug = True, host = &quot;0.0.0.0&quot;, port = 3000)
+</code></pre>
+<h1 id="rotas-url-e-views">Rotas URL e Views</h1>
+<p>A homepage de um website pode ser facilmente achada na URL <code>hostname</code> seguida de <code>/</code>, <code>/home</code>, <code>/index</code> ou algo auto explicativo.</p>
+<p>Estes tipos de URLs permitem que os usuários lembrem da URL e acessem facilmente. Seria inesperado se uma homepage fosse em uma URL aleatória como <code>/39283@&amp;3911</code> ou <code>/more_eggs</code>.</p>
+<p>Flask nos permite usar o decorator <code>route()</code> para vincular uma URL significativa a cada função view que criarmos.</p>
+<h2 id="o-decorator-route">O decorator <code>route()</code></h2>
+<p>O decorator route leva os seguintes parâmetros:</p>
+<ul>
+<li><code>rule</code>: representa a regra de URL que é passada como string ao decorador.</li>
+<li><code>endpoint</code> (não necessário):  É o nome da <strong>função de view</strong> que é vinculada a rota URL.</li>
+<li><code>options</code> (não necessário): Parâmetro opcional.</li>
+</ul>
+<h2 id="static-routing">Static Routing</h2>
+<p>Em roteamento estático, especificamos uma string URL constante como uma regra para o decorator <code>route()</code>. Na aplicação abaixo especificamos duas rotas estáticas tendo URLs <code>/</code> e <code>educative</code>, respectivamente.</p>
+<p><strong>Nota</strong>: A <code>rule</code> é uma string case-sensitive. Portanto,  <code>educative</code> e <code>Educative</code> são URLs totalmente diferentes.</p>
+<h3 id="um-exemplo-usando-rotas-url-estaticas">Um Exemplo usando rotas URL estáticas</h3>
+<pre><code class="language-python">from flask import Flask, render_template
+app = Flask(__name__)
+
+@app.route(&quot;/&quot;)
+def home():
+    return &quot;Welcome to the HomePage!&quot;
+
+@app.route(&quot;/educative&quot;)
+def learn():
+    return &quot;Happy Learning at Educative!&quot;
+
+if __name__ == &quot;__main__&quot;:
+    app.run(debug=True, host=&quot;0.0.0.0&quot;, port=3000)
+</code></pre>
+<h2 id="dynamic-routing">Dynamic Routing</h2>
+<p>Em roteamento dinâmico, o parâmetro <code>rule</code> não é uma string constante e sim uma <strong>variável</strong>.</p>
+<h3 id="variable-rules">Variable Rules</h3>
+<p>Em Flask podemos adicionar <strong>rules variáveis</strong> dentro da rota URL ao usar a seguinte sintaxe: <code>&lt;variable_name&gt;</code>. A variável chamada <code>variable_name</code> será então passada à função view para ser usada.</p>
+<h3 id="exemplo-usando-rules-variaveis">Exemplo usando rules variáveis</h3>
+<pre><code class="language-python">from flask import Flask
+app = Flask(__name__)
+
+@app.route(&quot;/&quot;)
+def home():
+    return &quot;Welcome to the HomePage!&quot;
+
+@app.route(&quot;/&lt;my_name&gt;&quot;)
+def greatings(my_name):
+    return &quot;Welcome &quot;+ my_name +&quot;!&quot;
+
+if __name__ == &quot;__main__&quot;:
+    app.run(debug=True, host=&quot;0.0.0.0&quot;, port=3000)
+</code></pre>
+<h2 id="converter">Converter</h2>
+<p>No exemplo anterior, a variável <code>my_name</code> foi extraída da URL e foi convertida em uma string e passada para a função <code>greetings()</code> para ser usada. Este é o comportamento padrão do <strong>converter</strong>.</p>
+<p><img src="C:\Users\glets\AppData\Roaming\Typora\typora-user-images\image-20220617155621523.png" alt="image-20220617155621523" style="zoom: 80%;" /></p>
+<pre><code class="language-python">@app.route('/square/&lt;int:number&gt;')
+def show_square(number):
+    &quot;&quot;&quot;View that shows the square of the number passed by URL&quot;&quot;&quot;
+    return &quot;Square of &quot;+ str(number) +&quot; is: &quot;+ str(number * number) 
+</code></pre>
+<h1 id="como-usar-templates-html">Como usar Templates HTML</h1>
+<h2 id="templates-estaticos">Templates Estáticos</h2>
+<p>São arquivos HTML que permanecem constantes. De fato, arquivos HTML padrão são estáticos por natureza. Sempre que o mesmo arquivo é renderizado, ele mostra o mesmo output, a menos que o arquivo seja alterado.</p>
+<p>Até agora, estamos retornando apenas uma string de uma função view. Mas em uma aplicação do mundo real, esperamos que um arquivo HTML seja retornado e renderizado no tela do browser.</p>
+<h2 id="renderizando-templates-html">Renderizando templates HTML</h2>
+<p>HTML pode ser renderizado com Flask usando dois métodos.</p>
+<h3 id="uma-string">Uma String</h3>
+<p>Podemos utilizar HTML como uma string em uma função view.</p>
+<pre><code class="language-python">from flask import Flask
+app = Flask(__name__)
+
+@app.route(&quot;/&quot;)
+def home():
+    return &quot;&lt;h1&gt;Welcome to the HomePage!&lt;/h1&gt;&quot;
+
+
+if __name__ == &quot;__main__&quot;:
+    app.run(debug=True, host=&quot;0.0.0.0&quot;, port=3000)
+</code></pre>
+<h3 id="funcao-render_template">Função render_template</h3>
+<p>Retornar HTML como uma String funciona perfeitamente, mas não é apropriado para aplicações práticas. É melhor manter código e templates separados. Portanto, criamos arquivos separados contendo o código HTML para os templates. Então, estes arquivos HTML pode ser referenciados para dentro dos views pelos seus nomes.</p>
+<p>Flask contém uma função chamada <code>render_template()</code> que é usada para renderizar os templates HTML desejados. Este método tem os seguintes parâmetros:</p>
+<ul>
+<li><code>template_name_or_list</code>: O nome do template ou de uma lista de templates (o método vai renderizar o primeiro template da lista).</li>
+<li><code>context</code> (opcional): variável que devem estar disponíveis dentro do template.</li>
+</ul>
+<p>O output de <code>render_template()</code> então é retornado pela view ao invés de uma simples String, como estávamos fazendo previamente.</p>
+<pre><code class="language-python">def view_name():
+    return render_template(template_name)
+</code></pre>
+<h2 id="estrategias-de-estrutura-de-arquivos">Estratégias de estrutura de arquivos</h2>
+<p>O framework Flask procura pelos arquivos de template HTML dentro de um diretório nomeado<code>\templates</code>. Este diretório deve ser posto de forma que Flask possa encontrar.</p>
+<h4 id="estrutura-de-arquivos-em-modulo">Estrutura de arquivos em módulo</h4>
+<p>Se seguir uma estrutura de arquivos modular em nosso projeto, um diretório separado chamado "templates" pode ser criado no mesmo diretório que o módulo principal da aplicação. (ex: <code>app.py</code>).</p>
+<p><img src="C:\Users\glets\AppData\Roaming\Typora\typora-user-images\image-20220617194233288.png" alt="image-20220617194233288" style="zoom:80%;" /></p>
+<h3 id="estrutura-de-arquivo-em-pacotes">Estrutura de arquivo em pacotes</h3>
+<p>Se a lógica da aplicação está dividida em módulos separados, então estes arquivos estão presentes no mesmo pacote.</p>
+<p>Em Python, um pacote é simplesmente um diretório contendo um arquivo nomeado como <code>__init__.py</code>. Se esta estrutura esta sendo seguida em nossa aplicação, então iremos criar o diretório <code>templates</code>  dentro do pacote da aplicação principal.</p>
+<p><img src="C:\Users\glets\AppData\Roaming\Typora\typora-user-images\image-20220617194618853.png" alt="image-20220617194618853" style="zoom: 80%;" /></p>
+<h1 id="arquivos-estaticos">Arquivos Estáticos</h1>
+<h1 id="como-servimos-arquivos-estaticos">Como Servimos Arquivos Estáticos?</h1>
+<p>Arquivos estáticos (ou assets), são arquivos que o servidor manda para o cliente "como eles são", sem qualquer intervenção. Por exemplo, qualquer arquivo <code>css</code>, ou <code>JavaScript</code> que podemos ter em nosso website são enviados para o cliente sem qualquer modificação.</p>
+<h2 id="passos-para-servir-arquivos-estaticos">Passos para servir Arquivos Estáticos</h2>
+<p>Os passos a seguir são necessários para hospedar um asset estático.</p>
+<h3 id="criar-um-diretorio-static">Criar um diretório <code>\static</code></h3>
+<p>As mesmas estratégias de estruturas de arquivos também se aplicam aqui.</p>
+<h3 id="criar-uma-url-para-arquivos-estaticos">Criar uma URL para arquivos estáticos</h3>
+<p>Não usamos views para arquivos estáticos. Então, para criar uma URL separada para eles, usamos a função <code>url_for()</code>.</p>
+<h3 id="funcao-url_for">Função <code>url_for()</code></h3>
+<p>A função <code>url_for()</code> é usada para criar uma URL para certo endpoint. Podemos usá-la para criar URLs  para views também. Ela leva o nome do endpoint e quaisquer variáveis associadas como argumentos.</p>
+<pre><code class="language-python">url_for('view_function_name', variable_name = 'value_of_variable')
+</code></pre>
+<blockquote>
+<p><strong>🤔 Porque precisamos usar <code>url_for()</code> se podemos escrever a URL?</strong></p>
+<ol>
+<li>A função <code>url_for()</code> sempre retorna a URL absoluta para o endpoint. Portanto, chamamos ela em qualquer lugar do projeto e não teremos problemas com caminhos relativos.</li>
+<li>Se acabarmos mudando o caminho para um endpoint ou rota para uma view, não temos que mudar a URL escrita em todo o projeto.</li>
+</ol>
+</blockquote>
+<p>A URL para um arquivo estático pode ser criada usando um endpoint <code>static</code> como a seguir:</p>
+<pre><code class="language-python">url_for('static', filename = 'name_of_file')
+</code></pre>
+<h3 id="exemplo">Exemplo</h3>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;{{url_for('static', filename='borders.css')}}&quot; /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Home Page!&lt;/h1&gt;
+        &lt;p&gt;Welcome to the homepage for &quot;How to Server Static Files&quot; Demo!&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><strong>Chaves duplas fazem parte da sintaxe de Jinja</strong></p>
+<h1 id="templates-dinamicos">Templates Dinâmicos</h1>
+<h2 id="templates-jinja2">Templates Jinja2</h2>
+<p>Considere que estamos fazendo uma aplicação com múltiplos usuários, tal como uma rede social, cada usuário terá um perfil único com informações únicas associadas a ele. É nosso trabalho na aplicação web servir um template único contendo o conteúdo correspondente a usuário que está logado.</p>
+<p><img src="C:\Users\glets\AppData\Roaming\Typora\typora-user-images\image-20220618075247718.png" alt="image-20220618075247718" style="zoom:80%;" /></p>
+<p>Podemos observar, que do lado do servidor, um template genérico está colocado contendo uma <strong>variable rule</strong>. Quando este template é renderizado no lado do cliente, uma valor apropriado é colocado ao invés da <strong>rule</strong>. Esse novo valor é de acordo com o contexto da aplicação. Este tipo de comportamento dinâmico de um template é chamado de <strong>dynamic templating</strong>.</p>
+<p>Muitas tecnologias server-side nos permitem implementar comportamento de template dinâmico. Flask tem suporte embutido para uma engine para criação de templates dinâmicos chamada <strong>Jinja</strong>.</p>
+<h3 id="a-engine-de-template-jinja">A Engine de Template Jinja</h3>
+<p>Um arquivo de template Jinja é um arquivo de texto que não tem uma extensão em particular. Usaremos extensão <code>.html</code> com os arquivos de template porque eles também irão incluir sintaxe <code>HTML</code>.</p>
+<h3 id="delimitadores">Delimitadores</h3>
+<ul>
+<li><code>{% ... %}</code> é usado para declarações.</li>
+<li>
+<p><code>{{ ... }}</code> é usado para variáveis.</p>
+</li>
+<li>
+<p><code>{# ... #}</code>é usado para comentários.</p>
+</li>
+<li><code># ... ##</code> é usado para declarações de linha.</li>
+</ul>
+<h3 id="variaveis">Variáveis</h3>
+<p>Podemos inserir variáveis dentro de templates seguindo estes dois passos:</p>
+<p>1 . O objeto é fornecido com um argumento nomeado para a função <code>render_template()</code>.</p>
+<pre><code class="language-python">return render_template(&quot;index.html&quot;, my_object = Object)
+</code></pre>
+<ol>
+<li>O valor desse objeto é buscado dentro do template usando a sintaxe <code>{{}}</code>.</li>
+</ol>
+<pre><code class="language-python">{{ my_object }}
+</code></pre>
+<h3 id="fluxo-de-controle-com-jinja">Fluxo de controle com Jinja</h3>
+<p>Jinja também fornece sintaxe para lidar com fluxo de controle de um aplicação dentro dos seus templates. Loops e condições podem ser adicionadas aos templates utilizando a sintaxe pythonica fornecida pelo Jinja.</p>
+<h4 id="loops">Loops</h4>
+<p>A sintaxe de <code>for</code> é bem parecida com a de python.</p>
+<pre><code class="language-python">{% for elements in array %}
+    ...
+{% endfor %}
+</code></pre>
+<h4 id="condicionais">Condicionais</h4>
+<pre><code class="language-python">{% if true %}
+{% endif %}
+</code></pre>
+<p>Múltiplas ramificações utilizando <code>elif</code> e <code>else</code>.</p>
+<pre><code class="language-python">{% if ... %}
+{% elif ... %}
+{% else %}
+{% endif %}
+</code></pre>
+<h2 id="template-inheritance">Template Inheritance</h2>
+<h3 id="blocks">Blocks</h3>
+<p>Em Jinja, <strong>blocks</strong> são usados como placeholders e também como substitutos. No template <strong>pai</strong>, estes blocos são usados como <strong>placeholders</strong>. Enquanto que no template filho, eles são usados como substitutos.</p>
+<p><img src="C:\Users\glets\AppData\Roaming\Typora\typora-user-images\image-20220618082013843.png" alt="image-20220618082013843" style="zoom: 80%;" /></p>
+<h4 id="basehtml"><code>base.html</code></h4>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;{{url_for('static', filename='format.css')}}&quot; /&gt;
+
+  &lt;title&gt;{% block title %}&lt;!-- Placeholder for Title --&gt;{% endblock %} - Jinja Demo&lt;/title&gt;
+
+    {% block head %} 
+    &lt;!-- Placeholder for Other Imports --&gt;
+    {% endblock %}
+
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;header&quot;&gt; JINJA DEMO &lt;/div&gt;
+    &lt;div id=&quot;content&quot;&gt;
+        {% block content %}
+        &lt;!-- Placeholder for Page Content --&gt;
+        {% endblock %}
+    &lt;/div&gt;
+    &lt;div id=&quot;footer&quot;&gt; Copyright © 2019 All Rights Reserved &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h4 id="homehtml">home.html</h4>
+<pre><code class="language-python">{% extends &quot;base.html&quot; %}
+
+&lt;!-- Replacement for Title --&gt;
+{% block title %}
+Home Page
+{% endblock %}
+
+&lt;!-- Replacement for Content --&gt;
+{% block content %}
+&lt;h1&gt;Home Page&lt;/h1&gt;
+&lt;p&gt;Welcome to the Jinja2 Demo.&lt;/p&gt;
+{% endblock %}
+</code></pre>
+<h4 id="abouthtml">about.html</h4>
+<pre><code class="language-html">{% extends &quot;base.html&quot; %}
+
+&lt;!-- Replacement for Title --&gt;
+{% block title %}
+About Page
+{% endblock %}
+
+&lt;!-- Replacement for Content --&gt;
+{% block content %}
+&lt;h1&gt;About Page&lt;/h1&gt;
+&lt;p&gt;In this lesson we are learning about Template Inheritance&lt;/p&gt;  
+{% endblock %}
+</code></pre>
+<h1 id="forms">Forms</h1>
+<p>O pacote Flask não fornece uma forma de lidar com formulários. Existem duas formas que desenvolvedor lidam com isso:</p>
+<ol>
+<li>Via objeto <code>request</code>.</li>
+<li>Via extensão <code>Flask-WTF</code>.</li>
+</ol>
+<h2 id="utilizando-request">Utilizando Request</h2>
+<p>Por padrão, o decorator <code>route()</code> serve apenas requisições <code>get</code>. Portanto, devemos fornecer um parâmetro extra, chamado <code>methods</code> para o decorator <code>route()</code>.</p>
+<pre><code class="language-python">@app.route(&quot;/login&quot;, methods=[&quot;GET&quot;, &quot;POST&quot;])
+</code></pre>
+<p><code>login.html</code></p>
+<pre><code class="language-html">{% block content %}
+&lt;h1&gt;Login&lt;/h1&gt;
+&lt;form action=&quot;{{url_for('login')}}&quot; method=&quot;POST&quot;&gt;
+  Email:&lt;br&gt;
+  &lt;input type=&quot;text&quot; name=&quot;email&quot; &gt;
+  &lt;br&gt;
+  Password:&lt;br&gt;
+  &lt;input type=&quot;password&quot; name=&quot;password&quot; &gt;
+  &lt;br&gt;&lt;br&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Login&quot;&gt;
+&lt;/form&gt; 
+{% endblock %}
+</code></pre>
+<h2 id="data-handling-usando-objeto-request">Data Handling usando objeto Request</h2>
+<p>Para acessar dados enviados pelo usuário usamos o objeto global <code>request</code>.</p>
+<pre><code class="language-python">from flask import request
+</code></pre>
+<h3 id="recebendo-o-tipo-de-method-de-request">Recebendo o tipo de <code>method</code> de request.</h3>
+<p>Podemos utilizar o atributo <code>method</code> do objeto request para determinar o método de um requisição entrante.</p>
+<pre><code class="language-python">@app.route(&quot;/login&quot;, methods=[&quot;GET&quot;, &quot;POST&quot;])
+def login():
+    if request.method == &quot;POST&quot;:
+        ...
+    else
+        ...
+    return render_template(&quot;login.html&quot;)
+</code></pre>
+<h3 id="recebendo-form-data-de-request">Recebendo <code>Form</code> data de <code>request</code></h3>
+<p>Podemos usar o atributo <code>form</code> de um objeto <code>request</code> para obter os valores que o usuário submeteu. a <!--variável--> <code>form</code> é uma estrutura de dados especial chamado <code>ImmutableMultiDict</code>.</p>
+<pre><code class="language-python">@app.route(&quot;/login&quot;, methods=[&quot;GET&quot;, &quot;POST&quot;])
+def login():
+    if request.method == &quot;POST&quot;:
+        email = request.form[&quot;email&quot;]
+        password = request.form[&quot;password&quot;]
+        ...
+    else:   
+        ...
+    return render_template(&quot;login.html&quot;)
+</code></pre>
+<h3 id="exemplo-com-logica-de-validacao">Exemplo com Lógica de Validação</h3>
+<pre><code class="language-python">from flask import Flask, render_template
+from flask import request
+app = Flask(__name__)
+
+users = {
+    &quot;archie.andrews@email.com&quot;: &quot;football4life&quot;,
+    &quot;veronica.lodge@email.com&quot;: &quot;fashiondiva&quot;
+}
+
+@app.route(&quot;/&quot;)
+def home():
+    return render_template(&quot;home.html&quot;)
+
+@app.route(&quot;/login&quot;, methods=[&quot;GET&quot;, &quot;POST&quot;])
+def login():
+    if request.method == &quot;POST&quot;:
+        email = request.form[&quot;email&quot;]
+        password = request.form[&quot;password&quot;]
+        if email in users and users[email] == password:
+            return render_template(&quot;login.html&quot;, message =&quot;Successfully Logged In&quot;)
+        return render_template(&quot;login.html&quot;, message =&quot;Incorrect Email or Password&quot;)
+    return render_template(&quot;login.html&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    app.run(debug=True, host=&quot;0.0.0.0&quot;, port=3000)
+</code></pre>
+<p><code>login.html</code></p>
+<pre><code class="language-html">{% block content %}
+&lt;h1&gt;Login&lt;/h1&gt;
+{% if message %}
+    {{ message }}
+{% endif %}
+&lt;form action=&quot;{{url_for('login')}}&quot; method=&quot;POST&quot;&gt;
+  Email:&lt;br&gt;
+  &lt;input type=&quot;text&quot; name=&quot;email&quot; &gt;
+  &lt;br&gt;
+  Password:&lt;br&gt;
+  &lt;input type=&quot;password&quot; name=&quot;password&quot; &gt;
+  &lt;br&gt;&lt;br&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Login&quot;&gt;
+&lt;/form&gt; 
+&lt;hr&gt;
+{% endblock %}
+</code></pre>
+<h2 id="criando-formularios-usando-flask-wtf-e-wtforms">Criando Formulários usando Flask-WTF e WTForms</h2>
+<p>Em nossa aplicação não tínhamos nenhuma checagem para email e password porque era um exemplo simples. Se quisermos adicionar esses checks deveríamos escreve lógica para isso no front end ou no backend (dentro da view <code>login</code>).</p>
+<p>Em aplicações maiores esses tipos de componentes extras podem facilmente se tornar <em>boiler-plate</em> e difícil de ler, para esse propósito algumas biblioteca tornam este processo mais fácil.</p>
+<p><strong>WTForms</strong>: É um biblioteca que torna trabalhar com formulários fácil. Ela lida não apenas com validação mas também com a renderização no front-end. Adicionalmente, <code>WTForms</code> não é limitada somente a Flask.</p>
+<p><strong>Flask-WTF</strong>: É uma biblioteca específica de <code>Flask</code> que integra a biblioteca <code>WTForm</code> com <code>Flask</code>. Age como um add-on de <code>WTForms</code> e adiciona alguns componentes extra, como segurança.</p>
+<p><strong>Criando um módulo forms:</strong></p>
+<p>Primeiro, separamos nosso módulo da aplicação do módulo dos formulários. Adicionaremos um novo arquivo chamado <code>forms.py</code>, que agirá como um módulo de formulários.</p>
+<p><strong>Importando <code>FlaskForm</code> de <code>flask_wtf</code>:</strong></p>
+<pre><code class="language-python">from flask_wtf import FlaskForm
+# Essa classe é uma subclasse de Form da bilioteca wtforms
+</code></pre>
+<p><strong>Criando classe <code>LoginForm</code></strong>:</p>
+<p>Para cada formulário em nosso website, criaremos uma classe a medida em que estamos criando um formulário de login. Portanto, vamos nomear essa classe <code>LoginForm</code>. Esta classe irá herdar da classe <code>FlaskForm</code> importada previamente.</p>
+<pre><code class="language-python">class LoginForm(FlaskForm):
+    ...
+</code></pre>
+<p><strong>Adicionando campos de formulário de <code>wtforms</code></strong></p>
+<p>O formulário de login anterior tinha 3 componentes:</p>
+<ol>
+<li>Um campo de input para email.</li>
+<li>Um campo de input para password.</li>
+<li>O campo do botão submit.</li>
+</ol>
+<p>Para todo campo possível, <code>wtforms</code> tem classes associadas. Para este exemplo particular, importaremos apenas os campos que precisamos:</p>
+<ol>
+<li>
+<p><code>StringField</code> para email.</p>
+</li>
+<li>
+<p><code>PasswordField</code> para um password.</p>
+</li>
+<li><code>SubmitField</code> para o botão submit.</li>
+</ol>
+<pre><code class="language-python">from wtforms import StringField, PasswordField, SubmitField
+</code></pre>
+<p>Agora vamos criar instâncias dessas classes como variáveis membros da nossa classe e iremos passar os rótulos desses campos como inputs para os construtores.</p>
+<pre><code class="language-python">class LoginForm(FlaskForm):
+    email = StringField('Email')
+    password = PasswordField('Password')
+    submit = SubmitField('Login')
+</code></pre>
+<p><strong>Adicionar validadores de campo do <code>wtforms</code></strong>:</p>
+<p><strong>Validadores</strong> são regras e checks que queremos aplicar aos nossos campos dentro de um formulário. Por exemplo, em um campo de email queremos ter certeza de que o input é um email válido. Para esse propósito iremos usar o validador <code>Email</code>.</p>
+<pre><code class="language-python">from wtforms.validators import InputRequired, Email 
+</code></pre>
+<p>Para aplicar estes validadores aos campos, fornecemos  uma lista de validadores como parâmetros a eles:</p>
+<pre><code class="language-python">class LoginForm(FlaskForm):
+    email = StringField('Email', validators=[InputRequired(), Email()])
+    password = PasswordField('Password', validators=[InputRequired()])
+    submit = SubmitField('Login')
+</code></pre>
+<ul>
+<li><code>InputRequired():</code> coloca o atributo <code>required</code> no HTML.</li>
+<li><code>Email()</code>: checa se o input é um email válido.</li>
+</ul>
+<p><strong>Implementação completa</strong></p>
+<pre><code class="language-python">from flask_wtf import FlaskForm
+from wtforms import StringField, PasswordField, SubmitField
+from wtforms.validators import InputRequired, Email
+
+class LoginForm(FlaskForm):
+    email = StringField('Email', validators=[InputRequired(), Email()])
+    password = PasswordField('Password', validators=[InputRequired()])
+    submit = SubmitField('Login')
+</code></pre>
+<h2 id="renderizando-formularios-flask-wtf-em-templates">Renderizando formulários Flask-WTF em templates</h2>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../Conda/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Criando um enviroment" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Criando um enviroment
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Machine%20Learning%20For%20Software%20Enginners/" class="md-footer__link md-footer__link--next" aria-label="Next: 7 Passos do Machine Learning" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              7 Passos do Machine Learning
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.85cb4492.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a877e258.min.js"></script>
+      
+    
+  </body>
+</html>
