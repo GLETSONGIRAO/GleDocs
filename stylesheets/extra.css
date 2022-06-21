@@ -34,3 +34,11 @@ h3 {
     font-weight: 1000;
 
 }
+
+.a {
+
+    text-decoration: none;
+    --tw-text-opacity: 1;
+    color: rgba(85,83,255);
+
+}
