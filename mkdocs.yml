@@ -1,6 +1,7 @@
 site_name: GleDocs
 theme:
   logo: assets/logo.png
+  favicon: assets/g.png
   name: material
   features:
     - navigation.expand
@@ -17,6 +18,10 @@ theme:
 
 nav:
     - Home: index.md
+    - Algoritmos Machine Learning:
+      - Aprendizado Supervisionado: AprendizadoSupervisionado.md
+      - Regressão Linear: regressaolinear.md
+      - Regressão Logística: regressãologistica.md
     - Conda: Conda.md
     - Flask: Flask.md
     - MachineLearning: "Machine Learning For Software Enginners.md"
@@ -38,6 +43,8 @@ extra:
   generator: false
 
 markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
   - admonition
   - pymdownx.details
   - pymdownx.superfences:
@@ -61,3 +68,8 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
