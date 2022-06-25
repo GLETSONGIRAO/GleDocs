@@ -13,7 +13,7 @@
     
     
       
-        <title>Conda - GleDocs</title>
+        <title>PyGal - GleDocs</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#criando-um-enviroment" class="md-skip">
+        <a href="#inicio-rapido" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Conda
+              PyGal
             
           </span>
         </div>
@@ -196,12 +196,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -222,11 +224,77 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../PyGal/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          PyGal
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         PyGal
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabela de Conteúdos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabela de Conteúdos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inicio-rapido" class="md-nav__link">
+    Início rápido
+  </a>
+  
+    <nav class="md-nav" aria-label="Início rápido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instalacao" class="md-nav__link">
+    Instalação
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usar-em-jupyter-notebooks" class="md-nav__link">
+    Usar em Jupyter Notebooks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplos-basicos" class="md-nav__link">
+    Exemplos básicos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -382,21 +450,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Conda/" class="md-nav__link">
         Conda
       </a>
-      
     </li>
   
 
@@ -561,8 +619,48 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabela de Conteúdos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inicio-rapido" class="md-nav__link">
+    Início rápido
+  </a>
+  
+    <nav class="md-nav" aria-label="Início rápido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instalacao" class="md-nav__link">
+    Instalação
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usar-em-jupyter-notebooks" class="md-nav__link">
+    Usar em Jupyter Notebooks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplos-basicos" class="md-nav__link">
+    Exemplos básicos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -576,47 +674,101 @@
                 
 
 
-<h1 id="criando-um-enviroment">Criando um enviroment<a class="headerlink" href="#criando-um-enviroment" title="Permanent link">&para;</a></h1>
-<blockquote>
-<p><strong>Envs</strong> são instalados no diretório <code>envs</code> dentro do diretório do conda</p>
-</blockquote>
-<ol>
-<li>Criar um <strong>env</strong> com conda:</li>
-</ol>
-<div class="highlight"><pre><span></span><code>conda create --name myenv
+  <h1>PyGal</h1>
+
+<h2 id="inicio-rapido">Início rápido<a class="headerlink" href="#inicio-rapido" title="Permanent link">&para;</a></h2>
+<p>PyGal é uma biblioteca <code>python</code> para criação de gráficos dinâmicos em SVG.</p>
+<h3 id="instalacao">Instalação<a class="headerlink" href="#instalacao" title="Permanent link">&para;</a></h3>
+<p>Simplesmente usar pip.</p>
+<div class="highlight"><pre><span></span><code>$ pip install pygal
 </code></pre></div>
-<blockquote>
-<p>Apertar y quando  conda perguntar "proceed ([y]/n)?"</p>
-</blockquote>
-<p>Isso cria um <strong>env</strong> sem nenhum pacote instalado.</p>
-<p><strong>Env</strong> com versão específica de Python:</p>
-<div class="highlight"><pre><span></span><code>conda create -n myenv python=3.9
+<h3 id="usar-em-jupyter-notebooks">Usar em Jupyter Notebooks<a class="headerlink" href="#usar-em-jupyter-notebooks" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
 </code></pre></div>
-<h1 id="utilidades">Utilidades<a class="headerlink" href="#utilidades" title="Permanent link">&para;</a></h1>
-<h2 id="ativando-um-enviroment">Ativando um enviroment<a class="headerlink" href="#ativando-um-enviroment" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>conda activate myenv
+<h3 id="exemplos-basicos">Exemplos básicos<a class="headerlink" href="#exemplos-basicos" title="Permanent link">&para;</a></h3>
+<h4 id="coisas-que-dao-medo-pesquisa-elaborada-pelo-serissimo-centro-de-pesquisas-ctpk">Coisas que dão Medo (Pesquisa elaborada pelo seríssimo Centro de Pesquisas CTPK).<a class="headerlink" href="#coisas-que-dao-medo-pesquisa-elaborada-pelo-serissimo-centro-de-pesquisas-ctpk" title="Permanent link">&para;</a></h4>
+<p>Em um <code>Jupyter Notebook</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+
+<span class="n">bar_chart</span> <span class="o">=</span> <span class="n">pygal</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">truncate_legend</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+<span class="n">bar_chart</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Coisas que mais dão medo (CTPK - 2022)&#39;</span>
+<span class="n">bar_chart</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Barata Voadora&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">30</span><span class="p">])</span>
+<span class="n">bar_chart</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Dois Caras Numa Moto&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">45</span><span class="p">])</span>
+<span class="n">bar_chart</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Entrar no próximo Leiófe&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">24</span><span class="p">])</span>
+<span class="n">bar_chart</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Resultado da eleição 2022&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">83</span><span class="p">])</span>
+<span class="n">bar_chart</span><span class="o">.</span><span class="n">render_to_file</span><span class="p">(</span><span class="s1">&#39;coisas_que_dao_medo.svg&#39;</span><span class="p">)</span>
+
+<span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&#39;&#39; &lt;object data=&quot;coisas_que_dao_medo.svg&quot; width=100</span><span class="si">% he</span><span class="s1">ight=100%&gt; &lt;/object&gt; &#39;&#39;&#39;</span><span class="p">)</span>
 </code></pre></div>
-<h2 id="informacoes">Informações<a class="headerlink" href="#informacoes" title="Permanent link">&para;</a></h2>
-<p>Mostar todos os ambientes criados. O que tem um asterisco * é o atual.</p>
-<div class="highlight"><pre><span></span><code>conda info --envs
-# ou
-conda env list
+<p>Com <code>lxml</code> instalado, o comando <code>render_in_browser</code> faz o Gráfico aparecer no navegador padrão.</p>
+<div class="highlight"><pre><span></span><code><span class="n">bar_chart</span><span class="o">.</span><span class="n">render_in_browser</span><span class="p">()</span>
 </code></pre></div>
-<p>Mostrar todos os pacotes de um env:</p>
-<div class="highlight"><pre><span></span><code>conda list
+<p><strong>Resultado:</strong></p>
+<p>(O gráfico gerado no notebook será dinâmico, ainda estou tentando descobrir como acoplar SVG dinâmico neste framework para criação de documentação em markdown).</p>
+<object alt="Browser Evolution" data="../assets/Coisas_que_dao_medo.svg"></object>
+
+<p>Os componentes de um gráfico de <code>pygal</code> são bastante intuitivos, neste Gráfico podemos alguns dos principais elementos:</p>
+<ul>
+<li>A documentação de <code>pygal</code> adota este padrão para a nomeação dos objetos: <code>tipodegráfico_chart</code>.</li>
+<li>Os objetos de gráfico estão dentro do pacote <code>pygal</code> e podem ser inicializados usando a sintaxe: <code>pygal.Tipo(parâmetros)</code>, um exemplo de parâmetro é o usado <code>truncate_legend</code>, que usei neste gráfico para aumentar o número de caracteres na legenda antes que sejam truncados.</li>
+<li><code>chart.add</code> usado para adicionar os elementos ao gráfico.</li>
+<li><code>chart.render()</code> método para renderizar o SVG. Em um jupyter notebook precisamos utilizar display e SVG.</li>
+</ul>
+<p>A função <code>chart.render_to_file('chart.svg')</code> pode ser usada para criar um arquivo SVG que pode facilmente ser colocado na WEB como este gráfico acima.</p>
+<p>A função <code>HTML</code> de <code>IPython.display</code> serve para renderizar HTML no IPython.</p>
+<p>Para adicionar o gráfico <strong>com interatividade</strong> em uma página html use a tag <code>object</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">object</span> <span class="na">data</span><span class="o">=</span><span class="s">&quot;assets/browser_evolution.svg&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">80%</span> <span class="na">height</span><span class="o">=</span><span class="s">50%</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">object</span><span class="p">&gt;</span>
 </code></pre></div>
-<h2 id="usar-pip-em-um-env">Usar pip em um env<a class="headerlink" href="#usar-pip-em-um-env" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>conda install -n myenv pip
-conda activate myenv
-pip &lt;pip_subcommand&gt;
+<p><strong>Forma Alternativa de escrever o código do gráfico acima:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># escrever uma vez</span>
+<span class="kn">import</span> <span class="nn">pygal</span> <span class="k">as</span> <span class="nn">pg</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+<span class="kn">import</span> <span class="nn">pygal</span> <span class="k">as</span> <span class="nn">pg</span>
+
+<span class="k">def</span> <span class="nf">pgr</span><span class="p">(</span><span class="n">chart_object</span><span class="p">,</span> <span class="n">nome_arquivo</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Função para renderizar arquivos SVG criados por pygal em um jupyter notebook, </span>
+<span class="sd">    ela cria uma pasta charts na pasta de trabalho salva o SVG nela e sem seguida,</span>
+<span class="sd">    renderiza o SVG em um HTML usando a tag &lt;object&gt;, que é a tag apropriada para SVG dinâmico. </span>
+
+<span class="sd">    args: </span>
+<span class="sd">        - chart_object (um objeto de gráfico em pygal que queremos renderizar)</span>
+<span class="sd">        - nome_arquivo (o nome)</span>
+<span class="sd">    return:</span>
+<span class="sd">        - SVG dinâmico renderizado em HTML.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">import</span> <span class="nn">os</span>
+    <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;charts&#39;</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> 
+
+    <span class="n">chart_object</span><span class="o">.</span><span class="n">render_to_file</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;charts/</span><span class="si">{</span><span class="n">nome_arquivo</span><span class="si">}</span><span class="s2">.svg&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&#39;&#39; &lt;object data=&quot;charts/</span><span class="si">{}</span><span class="s1">.svg&quot; width=95</span><span class="si">% he</span><span class="s1">ight=80%&gt; &lt;/object&gt; &#39;&#39;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nome_arquivo</span><span class="p">))</span>
+
+<span class="c1"># Código para o gráfico interativo</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">truncate_legend</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Coisas que mais dão medo (CTPK - 2022)&#39;</span>
+<span class="n">c</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Barata Voadora&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">30</span><span class="p">])</span>
+<span class="n">c</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Dois Caras Numa Moto&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">45</span><span class="p">])</span>
+<span class="n">c</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Entrar no próximo Leiófe&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">24</span><span class="p">])</span>
+<span class="n">c</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Resultado da eleição 2022&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">83</span><span class="p">])</span>
+<span class="n">pgr</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="s1">&#39;medo&#39;</span><span class="p">)</span>
 </code></pre></div>
-<h1 id="clonando-um-enviroment">Clonando um enviroment<a class="headerlink" href="#clonando-um-enviroment" title="Permanent link">&para;</a></h1>
-<div class="highlight"><pre><span></span><code>conda create --name myclone --clone myenv
+<h4 id="grafico-de-linhas-basico-documentacao-oficial">Gráfico de linhas básico (documentação oficial)<a class="headerlink" href="#grafico-de-linhas-basico-documentacao-oficial" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">line_chart</span> <span class="o">=</span> <span class="n">pygal</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span>
+<span class="n">line_chart</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Browser usage evolution (in %)&#39;</span>
+<span class="n">line_chart</span><span class="o">.</span><span class="n">x_labels</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2002</span><span class="p">,</span> <span class="mi">2013</span><span class="p">))</span>
+<span class="n">line_chart</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">&#39;Firefox&#39;</span><span class="p">,</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span>    <span class="mi">0</span><span class="p">,</span> <span class="mf">16.6</span><span class="p">,</span>   <span class="mi">25</span><span class="p">,</span>   <span class="mi">31</span><span class="p">,</span> <span class="mf">36.4</span><span class="p">,</span> <span class="mf">45.5</span><span class="p">,</span> <span class="mf">46.3</span><span class="p">,</span> <span class="mf">42.8</span><span class="p">,</span> <span class="mf">37.1</span><span class="p">])</span>
+<span class="n">line_chart</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">&#39;Chrome&#39;</span><span class="p">,</span>  <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span>    <span class="mi">0</span><span class="p">,</span>  <span class="mf">3.9</span><span class="p">,</span> <span class="mf">10.8</span><span class="p">,</span> <span class="mf">23.8</span><span class="p">,</span> <span class="mf">35.3</span><span class="p">])</span>
+<span class="n">line_chart</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">&#39;IE&#39;</span><span class="p">,</span>      <span class="p">[</span><span class="mf">85.8</span><span class="p">,</span> <span class="mf">84.6</span><span class="p">,</span> <span class="mf">84.7</span><span class="p">,</span> <span class="mf">74.5</span><span class="p">,</span>   <span class="mi">66</span><span class="p">,</span> <span class="mf">58.6</span><span class="p">,</span> <span class="mf">54.7</span><span class="p">,</span> <span class="mf">44.8</span><span class="p">,</span> <span class="mf">36.2</span><span class="p">,</span> <span class="mf">26.6</span><span class="p">,</span> <span class="mf">20.1</span><span class="p">])</span>
+<span class="n">line_chart</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">&#39;Others&#39;</span><span class="p">,</span>  <span class="p">[</span><span class="mf">14.2</span><span class="p">,</span> <span class="mf">15.4</span><span class="p">,</span> <span class="mf">15.3</span><span class="p">,</span>  <span class="mf">8.9</span><span class="p">,</span>    <span class="mi">9</span><span class="p">,</span> <span class="mf">10.4</span><span class="p">,</span>  <span class="mf">8.9</span><span class="p">,</span>  <span class="mf">5.8</span><span class="p">,</span>  <span class="mf">6.7</span><span class="p">,</span>  <span class="mf">6.8</span><span class="p">,</span>  <span class="mf">7.5</span><span class="p">])</span>
+
+<span class="n">bar_chart</span><span class="o">.</span><span class="n">render_to_file</span><span class="p">(</span><span class="s1">&#39;browser_evolution.svg&#39;</span><span class="p">)</span>
+<span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&#39;&#39; &lt;object data=&quot;browser_evolution.svg&quot; width=100</span><span class="si">% he</span><span class="s1">ight=100%&gt; &lt;/object&gt; &#39;&#39;&#39;</span><span class="p">)</span>
 </code></pre></div>
-<h1 id="remover-um-env">Remover um Env<a class="headerlink" href="#remover-um-env" title="Permanent link">&para;</a></h1>
-<div class="highlight"><pre><span></span><code>conda remove --name myenv --all
-</code></pre></div>
-<p>​   </p>
+<p><strong>Resultado:</strong></p>
+<object alt="Browser Evolution" data="../assets/browser_evolution.svg"></object>
 
               
             </article>
@@ -634,7 +786,7 @@ pip &lt;pip_subcommand&gt;
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../fundamentos_web/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Fundamentos Web" rel="prev">
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -643,20 +795,20 @@ pip &lt;pip_subcommand&gt;
               <span class="md-footer__direction">
                 Previous
               </span>
-              Fundamentos Web
+              Home
             </div>
           </div>
         </a>
       
       
         
-        <a href="../Flask/" class="md-footer__link md-footer__link--next" aria-label="Next: Flask" rel="next">
+        <a href="../AprendizadoSupervisionado/" class="md-footer__link md-footer__link--next" aria-label="Next: Aprendizado Supervisionado" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Flask
+              Aprendizado Supervisionado
             </div>
           </div>
           <div class="md-footer__button md-icon">

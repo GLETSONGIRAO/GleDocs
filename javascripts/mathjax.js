@@ -14,3 +14,5 @@ window.MathJax = {
   document$.subscribe(() => { 
     MathJax.typesetPromise()
 })
+
+<script type="text/javascript" src="http://kozea.github.com/pygal.js/latest/pygal-tooltips.min.js"></script>

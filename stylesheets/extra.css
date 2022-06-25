@@ -1,3 +1,36 @@
+:root > * {
+    --md-primary-fg-color:        #c32aff;
+    --md-accent-fg-color: #FABD12;
+    --md-default-fg-color--lightest: #f8f8f817;
+
+}
+
+.mermaid {
+    width: 70%;
+    display: block;
+    margin: auto;
+
+}
+
+g {
+    width: 50%;
+    display: block;
+    margin: auto;
+
+}
+
+.md-footer__inner:not([hidden]) {
+    display: none;
+}
+
+.md-header {
+
+    background: #2b5876;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4e4376, #2b5876);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4e4376, #2b5876); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+
 .md-typeset h1, .md-typeset h2 {
     letter-spacing: -.01em;
     font-family: 'Source Sans Pro', sans-serif;
