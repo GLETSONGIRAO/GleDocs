@@ -1,0 +1,1244 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/g.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.6">
+    
+    
+      
+        <title>Engenharia de Sofware - GleDocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4a0965b7.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#7e56c2">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i%7CSource+Code+Pro:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Source Sans Pro";--md-code-font:"Source Code Pro"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-purple" data-md-color-accent="amber">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#engenharia-de-software" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="GleDocs" class="md-header__button md-logo" aria-label="GleDocs" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GleDocs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Engenharia de Sofware
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="GleDocs" class="md-nav__button md-logo" aria-label="GleDocs" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    GleDocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          DataViz
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="DataViz" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          DataViz
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PyGal/" class="md-nav__link">
+        PyGal
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Algoritmos Machine Learning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algoritmos Machine Learning" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Algoritmos Machine Learning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AprendizadoSupervisionado/" class="md-nav__link">
+        Aprendizado Supervisionado
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../regressaolinear/" class="md-nav__link">
+        Regressão Linear
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../regressãologistica.md" class="md-nav__link">
+        Regressão Logística
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Desenvolvimento Web
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Desenvolvimento Web" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Desenvolvimento Web
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lan%C3%A7andoWebsite/" class="md-nav__link">
+        Publicando um Website
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fundamentos_web/" class="md-nav__link">
+        Fundamentos Web
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Engenharia de Sofware
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Engenharia de Sofware
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabela de Conteúdos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabela de Conteúdos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#praticas-de-engenharia-de-software" class="md-nav__link">
+    Práticas de Engenharia de Software
+  </a>
+  
+    <nav class="md-nav" aria-label="Práticas de Engenharia de Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#codigo-de-producao" class="md-nav__link">
+    Código de Produção
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refatoracao" class="md-nav__link">
+    Refatoração
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#namespaces" class="md-nav__link">
+    Namespaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uso-de-espaco-em-branco" class="md-nav__link">
+    Uso de espaço em branco
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escrevendo-codigo-modular" class="md-nav__link">
+    Escrevendo código Modular
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eficiencia-do-codigo" class="md-nav__link">
+    Eficiência do Código
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacao" class="md-nav__link">
+    Documentação
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste" class="md-nav__link">
+    Teste
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    Logging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-review" class="md-nav__link">
+    Code Review
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programacao-orientada-a-objetos-oop" class="md-nav__link">
+    Programação Orientada a Objetos (OOP)
+  </a>
+  
+    <nav class="md-nav" aria-label="Programação Orientada a Objetos (OOP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definicoes" class="md-nav__link">
+    Definições
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sintaxe" class="md-nav__link">
+    Sintaxe:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Machine Learning Engineering
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Machine Learning Engineering" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Machine Learning Engineering
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MachineLearningDeploy/" class="md-nav__link">
+        Machine Learning em produção
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Conda/" class="md-nav__link">
+        Conda
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Flask/" class="md-nav__link">
+        Flask
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../XGBoost/" class="md-nav__link">
+        XGBoost
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mkdocs/" class="md-nav__link">
+        Mkdocs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Projetos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Projetos" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Projetos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_11_1" type="checkbox" id="__nav_11_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_1">
+          Phenotype Predicition
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Phenotype Predicition" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_1">
+          <span class="md-nav__icon md-icon"></span>
+          Phenotype Predicition
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eye_color/" class="md-nav__link">
+        Aquisição dos Dados
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eye_color_pt2/" class="md-nav__link">
+        Preparação e Análise
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Estatistica/" class="md-nav__link">
+        Estatística
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabela de Conteúdos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabela de Conteúdos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#praticas-de-engenharia-de-software" class="md-nav__link">
+    Práticas de Engenharia de Software
+  </a>
+  
+    <nav class="md-nav" aria-label="Práticas de Engenharia de Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#codigo-de-producao" class="md-nav__link">
+    Código de Produção
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refatoracao" class="md-nav__link">
+    Refatoração
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#namespaces" class="md-nav__link">
+    Namespaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uso-de-espaco-em-branco" class="md-nav__link">
+    Uso de espaço em branco
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escrevendo-codigo-modular" class="md-nav__link">
+    Escrevendo código Modular
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eficiencia-do-codigo" class="md-nav__link">
+    Eficiência do Código
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacao" class="md-nav__link">
+    Documentação
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste" class="md-nav__link">
+    Teste
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    Logging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-review" class="md-nav__link">
+    Code Review
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programacao-orientada-a-objetos-oop" class="md-nav__link">
+    Programação Orientada a Objetos (OOP)
+  </a>
+  
+    <nav class="md-nav" aria-label="Programação Orientada a Objetos (OOP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definicoes" class="md-nav__link">
+    Definições
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sintaxe" class="md-nav__link">
+    Sintaxe:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="engenharia-de-software">Engenharia de Software<a class="headerlink" href="#engenharia-de-software" title="Permanent link">&para;</a></h1>
+<h2 id="praticas-de-engenharia-de-software">Práticas de Engenharia de Software<a class="headerlink" href="#praticas-de-engenharia-de-software" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Escrever código limpo e modular</li>
+<li>Melhorar a eficiência do código</li>
+<li>Adicionar documentação efetiva</li>
+<li>Usar controle de versão</li>
+<li>Teste</li>
+<li>Logging</li>
+<li>Code Reviews</li>
+</ul>
+<h3 id="codigo-de-producao">Código de Produção<a class="headerlink" href="#codigo-de-producao" title="Permanent link">&para;</a></h3>
+<p>Código em produção precisa ser confiável e eficiente.</p>
+<p><strong>Código Limpo</strong>: Legível, simples e conciso. Uma característica do código em produção essencial para colaboração e manutenibilidade do software.</p>
+<p><strong>Modular</strong>: Logicamente dividido em funções e módulos. Torna o código mais organizado, eficiente e reusável.</p>
+<p>Um <strong>módulo</strong> é um arquivo que permite que o código seja reusado. Encapsulando o código em arquivos que podem ser importados em outros arquivos.</p>
+<h3 id="refatoracao">Refatoração<a class="headerlink" href="#refatoracao" title="Permanent link">&para;</a></h3>
+<p>Reestruturação do código para melhorar a estrutura interna sem mudar a funcionalidade externa.</p>
+<p>A refatoração nos dá a chance de escrever de escrever código limpo e modular depois que ele já está funcionando.</p>
+<p><strong>Vantagens</strong>:</p>
+<ul>
+<li>Reduz a carga de trabalho a longo prazo.</li>
+<li>Mias fácil de dar manutenção no código.</li>
+<li>Mais fácil de reusar o código.</li>
+<li>Ajuda a tornar um melhor desenvolvedor.</li>
+</ul>
+<h3 id="namespaces">Namespaces<a class="headerlink" href="#namespaces" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Usar nomes descritivos e implicar o tipo.<ul>
+<li>Ex: <code>is_</code> ou <code>has_</code> para booleanos, <code>age_list</code> para listas.</li>
+</ul>
+</li>
+<li>Ser consistente, mas diferenciar claramente.</li>
+<li>Evitar abreviações e letras únicas.<ul>
+<li>Com exceção de contadores como <code>i</code> ou <code>j</code>.</li>
+</ul>
+</li>
+<li>Evitar nomes longos, colocar apenas informação relevante nos nomes.</li>
+</ul>
+<h3 id="uso-de-espaco-em-branco">Uso de espaço em branco<a class="headerlink" href="#uso-de-espaco-em-branco" title="Permanent link">&para;</a></h3>
+<ul>
+<li>O padrão de identação em python são 4 espaços.</li>
+<li>Separa seções com espaço em branco.</li>
+<li>Limitar as linhas em 79 caracteres, docstrings em 72 caracteres.</li>
+</ul>
+<h3 id="escrevendo-codigo-modular">Escrevendo código Modular<a class="headerlink" href="#escrevendo-codigo-modular" title="Permanent link">&para;</a></h3>
+<ul>
+<li>DRY (Don't Repeat Yourself).</li>
+<li>Abstrair a lógica para melhorar a legibilidade do código.</li>
+<li>Uma função deve fazer apenas uma coisa.</li>
+<li>Tentar usar menos do que 3 argumentos por função.</li>
+</ul>
+<h3 id="eficiencia-do-codigo">Eficiência do Código<a class="headerlink" href="#eficiencia-do-codigo" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Código Eficiente</p>
+<ul>
+<li>
+<p>Executa mais rápido.</p>
+</li>
+<li>
+<p>Ocupa Menos espaço na memória.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Usar operações vetorizadas (NumPy).</p>
+</li>
+<li>Teste de pertencimento em Sets é mais rápido do que em listas.</li>
+</ul>
+<h3 id="documentacao">Documentação<a class="headerlink" href="#documentacao" title="Permanent link">&para;</a></h3>
+<p>Texto adicionar ou ilustração que vem com o Software ou está embutido no código.</p>
+<p>Útil para clarificar partes complexas do código, tornando o código mais fácil de navegar e entender porque diferentes componentes do programa são usados.</p>
+<p>Diferentes tipos de documentação podem ser usados em diferentes níveis do programa:</p>
+<ul>
+<li>Comentários in-line.</li>
+<li>Docstrings.</li>
+<li>Documentação do projeto.</li>
+</ul>
+<h3 id="teste">Teste<a class="headerlink" href="#teste" title="Permanent link">&para;</a></h3>
+<p>Testar o código é essencial antes da implantação, teste ajuda a descobrir erros e conclusões precipitadas antes que elas tenham um impacto maior.</p>
+<p><strong>Test Driven Development</strong>: Um processo de desenvolvimento onde teste são escritos para uma tarefa antes mesmo do código para a execução da tarefa.</p>
+<p><strong>Teste Unitário</strong>: Um tipo de teste que cobre uma "unidade" de código, geralmente uma única função, de forma independente do resto do programa.</p>
+<p>Testes unitários tem a vantagem de serem isolados do resto do programa e não ter dependências envolvidas, não necessitam de acessos a banco de dados ou APIs. Entretanto, para garantir que o programa inteiro esteja funcionando corretamente é necessário fazer <strong>testes de integração</strong>.</p>
+<p><strong>Ferramentas para Testes Unitários</strong>: Começar com <a href="https://docs.pytest.org/en/latest/getting-started.html">Pytest</a>.</p>
+<h3 id="logging">Logging<a class="headerlink" href="#logging" title="Permanent link">&para;</a></h3>
+<p>Logging é o processo de gravar mensagens que descrevem os eventos que ocorreram enquanto o programa está rodando.</p>
+<p>Logging é útil para entender os eventos que ocorrem enquanto o problema executa.</p>
+<p><strong>Escolher o nível apropriado para logging:</strong></p>
+<ul>
+<li>DEBUG - Para qualquer coisa que acontece no programa.</li>
+<li>ERROR - Gravar qualquer erro que ocorre.</li>
+<li>INFO - Gravar todas as ações ocasionadas pelo usuário ou específicas do sistema.</li>
+</ul>
+<p>Dica: Fornecer qualquer informação útil.</p>
+<h3 id="code-review">Code Review<a class="headerlink" href="#code-review" title="Permanent link">&para;</a></h3>
+<p>As perguntas abaixo ajudam a conduzir uma code review.  </p>
+<p><strong>O código é limpo e modular?</strong></p>
+<ul>
+<li>Pode ser entendido facilmente?</li>
+<li>Nomes e espaços são significantes?</li>
+<li>Pode ser fornecida outra camada de abstração?</li>
+<li>Cada módulo é necessário?</li>
+<li>Algum módulo ou função é muito longa?</li>
+</ul>
+<p><strong>O código é eficiente?</strong></p>
+<ul>
+<li>Existe algum loop que pode ser vetorizado?</li>
+<li>Podem ser aplicadas melhores estruturas de dados?</li>
+<li>Pode ser diminuída a quantidade de cálculos necessários em cada passo?</li>
+<li>Podem ser usados geradores ou multiprocessamento para otimizar algum passo?</li>
+</ul>
+<p><strong>A documentação é efetiva?</strong></p>
+<ul>
+<li>Os comentários in-line são concisos e significativos?</li>
+<li>Existe algum código complexo que a documentação não explica?</li>
+<li>As funções têm docstrings efetivas?</li>
+<li>A documentação necessária para o projeto é fornecida?</li>
+</ul>
+<p><strong>O código está bem testado?</strong></p>
+<ul>
+<li>O código tem boa cobertura de testes?</li>
+<li>Os testes checam para casos interessantes?</li>
+<li>Os testes são legíveis?</li>
+<li>Testes podem ser mais eficientes?</li>
+</ul>
+<p><strong>O logging é efetivo?</strong></p>
+<ul>
+<li>As mensagens de log são limpas, concisas e profissionais?</li>
+<li>Elas incluem toda a informação útil e relevante?</li>
+<li>Elas usam o nível apropriado de logging?</li>
+</ul>
+<h2 id="programacao-orientada-a-objetos-oop">Programação Orientada a Objetos (OOP)<a class="headerlink" href="#programacao-orientada-a-objetos-oop" title="Permanent link">&para;</a></h2>
+<p>Programação Orientada a Objetos tem algumas vantagens sobre programação procedural:</p>
+<ul>
+<li>Permite a criação de programas grandes, modulares que podem ser facilmente expandidos.</li>
+<li>Esconde as implementações do usuário final.</li>
+</ul>
+<p>Objetos são definidos por características e ações.</p>
+<h3 id="definicoes">Definições<a class="headerlink" href="#definicoes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Classe: Uma receita, consistindo de métodos e atributos.</li>
+<li>Objeto: Um instância de uma classe.</li>
+<li>Atributos: Uma descrição ou característica.</li>
+<li>Método: Uma ação que um objeto pode tomar.</li>
+<li>Encapsulamento: Uma das ideias fundamentais da OOP. Podemos combinar funções e dados em um única entidade. Permite esconder detalhes da implementação.</li>
+</ul>
+<h3 id="sintaxe">Sintaxe:<a class="headerlink" href="#sintaxe" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">#definindo uma classe</span>
+<span class="k">class</span> <span class="nc">Shirt</span><span class="p">():</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">shirt_color</span><span class="p">,</span> <span class="n">shirt_size</span><span class="p">,</span> <span class="n">shirt_price</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">shirt</span><span class="o">.</span><span class="n">color</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="n">shirt</span><span class="o">.</span><span class="n">size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">price</span> <span class="o">=</span> <span class="n">shirt</span><span class="o">.</span><span class="n">price</span>
+
+    <span class="k">def</span> <span class="nf">set_price</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_price</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">price</span> <span class="o">=</span> <span class="n">new_price</span>
+
+<span class="n">new_shirt</span> <span class="o">=</span> <span class="n">Shirt</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="metodos-get-e-set">Métodos <code>Get</code> e <code>Set</code><a class="headerlink" href="#metodos-get-e-set" title="Permanent link">&para;</a></h4>
+<p>Em OOP tradicional, acesso e mudança de atributos são usadas com os métodos <code>Get</code> e <code>Set</code>, e os atributos são definidos com <code>_attribute</code> como forma de avisar que um atributos é privado, mesmo isso não existindo em python.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Shirt</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">shirt_color</span><span class="p">,</span> <span class="n">shirt_size</span><span class="p">,</span> <span class="n">shirt_style</span><span class="p">,</span> <span class="n">shirt_price</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_price</span> <span class="o">=</span> <span class="n">shirt_price</span>
+
+    <span class="k">def</span> <span class="nf">get_price</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_price</span>
+
+    <span class="k">def</span> <span class="nf">set_price</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_price</span><span class="p">):</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">_price</span> <span class="o">=</span> <span class="n">new_price</span>
+</code></pre></div>
+<h4 id="docstrings">Docstrings<a class="headerlink" href="#docstrings" title="Permanent link">&para;</a></h4>
+<p>Não é necessário definir "self" na docstring do método, já está subtendido que qualquer método terá self como primeiro input.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Pants</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;The Pants class represents an article of clothing sold in a store</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">waist_size</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">price</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Method for initializing a Pants object</span>
+
+<span class="sd">        Args: </span>
+<span class="sd">            color (str)</span>
+<span class="sd">            waist_size (int)</span>
+<span class="sd">            length (int)</span>
+<span class="sd">            price (float)</span>
+
+<span class="sd">        Attributes:</span>
+<span class="sd">            color (str): color of a pants object</span>
+<span class="sd">            waist_size (str): waist size of a pants object</span>
+<span class="sd">            length (str): length of a pants object</span>
+<span class="sd">            price (float): price of a pants object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">waist_size</span> <span class="o">=</span> <span class="n">waist_size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">=</span> <span class="n">length</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">price</span> <span class="o">=</span> <span class="n">price</span>
+
+    <span class="k">def</span> <span class="nf">change_price</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_price</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;The change_price method changes the price attribute of a pants object</span>
+
+<span class="sd">        Args: </span>
+<span class="sd">            new_price (float): the new price of the pants object</span>
+
+<span class="sd">        Returns: None</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">price</span> <span class="o">=</span> <span class="n">new_price</span>
+
+    <span class="k">def</span> <span class="nf">discount</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">percentage</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;The discount method outputs a discounted price of a pants object</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            percentage (float): a decimal representing the amount to discount</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            float: the discounted price</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">price</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">percentage</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Recursos:</strong> </p>
+<p><a href="https://peps.python.org/pep-0257/">PEP 257 – Docstring Conventions</a></p>
+<p><a href="https://numpydoc.readthedocs.io/en/latest/format.html">Numpy Docstring Guide</a></p>
+<p><a href="https://www.python.org/dev/peps/pep-0008/?#code-lay-out">PEP 8 guidelines for code layout</a></p>
+
+              
+            </article>
+            
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../fundamentos_web/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Fundamentos Web" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Fundamentos Web
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../MachineLearningDeploy/" class="md-footer__link md-footer__link--next" aria-label="Next: Machine Learning em produção" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Machine Learning em produção
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/GLETSONGIRAO" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/gletsonbarreto" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/gletsonbarreto" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "header.autohide", "content.tabs.link", "navigation.instant"], "search": "../assets/javascripts/workers/search.85cb4492.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a877e258.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1268 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/g.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.6">
+    
+    
+      
+        <title>Preparação e Análise - GleDocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4a0965b7.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#7e56c2">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i%7CSource+Code+Pro:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Source Sans Pro";--md-code-font:"Source Code Pro"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-purple" data-md-color-accent="amber">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#parte-2-preparacao-e-analise-dos-dados" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="GleDocs" class="md-header__button md-logo" aria-label="GleDocs" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GleDocs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Preparação e Análise
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="GleDocs" class="md-nav__button md-logo" aria-label="GleDocs" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    GleDocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          DataViz
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="DataViz" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          DataViz
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PyGal/" class="md-nav__link">
+        PyGal
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Algoritmos Machine Learning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algoritmos Machine Learning" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Algoritmos Machine Learning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AprendizadoSupervisionado/" class="md-nav__link">
+        Aprendizado Supervisionado
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../regressaolinear/" class="md-nav__link">
+        Regressão Linear
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../regressãologistica.md" class="md-nav__link">
+        Regressão Logística
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Desenvolvimento Web
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Desenvolvimento Web" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Desenvolvimento Web
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lan%C3%A7andoWebsite/" class="md-nav__link">
+        Publicando um Website
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fundamentos_web/" class="md-nav__link">
+        Fundamentos Web
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EngenhariaDeSoftware/" class="md-nav__link">
+        Engenharia de Sofware
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Machine Learning Engineering
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Machine Learning Engineering" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Machine Learning Engineering
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MachineLearningDeploy/" class="md-nav__link">
+        Machine Learning em produção
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Conda/" class="md-nav__link">
+        Conda
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Flask/" class="md-nav__link">
+        Flask
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../XGBoost/" class="md-nav__link">
+        XGBoost
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mkdocs/" class="md-nav__link">
+        Mkdocs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Projetos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Projetos" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Projetos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_1" type="checkbox" id="__nav_11_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_1">
+          Phenotype Predicition
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Phenotype Predicition" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_1">
+          <span class="md-nav__icon md-icon"></span>
+          Phenotype Predicition
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eye_color/" class="md-nav__link">
+        Aquisição dos Dados
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Preparação e Análise
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Preparação e Análise
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabela de Conteúdos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabela de Conteúdos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preparacao-dos-dados" class="md-nav__link">
+    Preparação dos Dados
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparação dos Dados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tratamento-dos-atributos" class="md-nav__link">
+    Tratamento dos atributos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analise-dos-dados" class="md-nav__link">
+    Análise dos Dados
+  </a>
+  
+    <nav class="md-nav" aria-label="Análise dos Dados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#distribuicao-da-variavel-alvo-color_cat" class="md-nav__link">
+    Distribuição da Variável Alvo: color_cat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distribuicao-das-features-snps" class="md-nav__link">
+    Distribuição das Features (snps):
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correlacoes-entre-as-variaveis" class="md-nav__link">
+    Correlações entre as Variáveis
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#baseline" class="md-nav__link">
+    Baseline
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Estatistica/" class="md-nav__link">
+        Estatística
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabela de Conteúdos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabela de Conteúdos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preparacao-dos-dados" class="md-nav__link">
+    Preparação dos Dados
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparação dos Dados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tratamento-dos-atributos" class="md-nav__link">
+    Tratamento dos atributos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analise-dos-dados" class="md-nav__link">
+    Análise dos Dados
+  </a>
+  
+    <nav class="md-nav" aria-label="Análise dos Dados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#distribuicao-da-variavel-alvo-color_cat" class="md-nav__link">
+    Distribuição da Variável Alvo: color_cat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distribuicao-das-features-snps" class="md-nav__link">
+    Distribuição das Features (snps):
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correlacoes-entre-as-variaveis" class="md-nav__link">
+    Correlações entre as Variáveis
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#baseline" class="md-nav__link">
+    Baseline
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="parte-2-preparacao-e-analise-dos-dados">Parte 2: Preparação e Análise dos dados<a class="headerlink" href="#parte-2-preparacao-e-analise-dos-dados" title="Permanent link">&para;</a></h1>
+<h2 id="preparacao-dos-dados">Preparação dos Dados<a class="headerlink" href="#preparacao-dos-dados" title="Permanent link">&para;</a></h2>
+<p>Carregando os arquivos:</p>
+<div class="highlight"><pre><span></span><code><span class="n">phenotypes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;datasets/eye_color_df_snp.csv&#39;</span><span class="p">)</span>
+<span class="n">snps</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;datasets/users_snps.csv&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Relembrando como são os dados:</strong></p>
+<ul>
+<li>Dataset com fenótipos:<ul>
+<li>Tamanho: 1286</li>
+</ul>
+</li>
+</ul>
+<p><img alt="image-20220627153234906" src="../assets/eyecolor/dataset1.png" /></p>
+<ul>
+<li>
+<p>Dataset com snps:</p>
+<ul>
+<li>Tamanho: 1264</li>
+</ul>
+<p><img alt="image-20220627153234906" src="../assets/eyecolor/dataset3.png" /></p>
+</li>
+</ul>
+<p><strong>Juntando os dados:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span> <span class="o">=</span> <span class="n">snps</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">phenotypes</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span> <span class="s1">&#39;user_id&#39;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+</code></pre></div>
+<p>Resultado:</p>
+<p><img alt="image-20220627153234906" src="../assets/eyecolor/df4.png" /></p>
+<p>Tamanho: 1264</p>
+<p>Conjunto com todas as snps carregadas:</p>
+<div class="highlight"><pre><span></span><code><span class="n">snp_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;rs12913832&#39;</span><span class="p">,</span> <span class="s1">&#39;rs1800407&#39;</span><span class="p">,</span> <span class="s1">&#39;rs12896399&#39;</span><span class="p">,</span> <span class="s1">&#39;rs16891982&#39;</span><span class="p">,</span> <span class="s1">&#39;rs1393350&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;rs12203592&#39;</span><span class="p">,</span> <span class="s1">&#39;rs1129038&#39;</span><span class="p">,</span> <span class="s1">&#39;rs116363232&#39;</span><span class="p">,</span> <span class="s1">&#39;rs1289399&#39;</span><span class="p">]</span>
+</code></pre></div>
+<h3 id="tratamento-dos-atributos">Tratamento dos atributos<a class="headerlink" href="#tratamento-dos-atributos" title="Permanent link">&para;</a></h3>
+<p>Cada atributos de snp deve conter apenas 4 classes diferentes:</p>
+<ul>
+<li>"RR": Dois alelos com o valor de referência.</li>
+<li>"RM": Um alelo com o valor de referência e outro com o valor da mutação.</li>
+<li>"MM": Dois alelos com o valor de mutação, e</li>
+<li>"missing": valor que não foi obtido no processo de aquisição.</li>
+</ul>
+<p>Após contar os valores de cada coluna foi constatada a necessidade das seguintes intervenções:</p>
+<ul>
+<li>Descartar entradas que tiveram fora dos padrão. (Exemplo: BB quando os alelos tem valor A ou G.)</li>
+<li>Transformar RM em MR visto que estes têm o mesmo valor.</li>
+</ul>
+<h4 id="analise-individual-das-colunas">Análise individual das colunas:<a class="headerlink" href="#analise-individual-das-colunas" title="Permanent link">&para;</a></h4>
+<p><strong>Primeira Coluna</strong></p>
+<div class="highlight"><pre><span></span><code>Snp analisada: rs12913832
+GG         566
+AG         381
+AA         167
+missing    148
+BB           1
+
+Entradas fora do padrão: BB
+Removendo entradas fora do padrão...
+Tamanho df final: 1263
+</code></pre></div>
+<p><strong>Segunda Coluna</strong></p>
+<div class="highlight"><pre><span></span><code>Snp analisada: rs1800407
+CC         1044
+CT          113
+missing      59
+TC           37
+TT            8
+GG            1
+
+Entradas fora do padrão: GG
+Entradas iguais: [&#39;CT&#39;, &#39;TC&#39;]
+Removendo entradas fora do padrão...
+Substituindo TC por CT...
+Tamanho df final: 1262
+</code></pre></div>
+<p><strong>Terceira Coluna</strong></p>
+<div class="highlight"><pre><span></span><code>Snp analisada: rs12896399
+GT         432
+GG         344
+missing    230
+TT         197
+TG          57
+AA           1
+
+Entradas fora do padrão: AA
+Entradas iguais: [&#39;GT&#39;, &#39;TG&#39;]
+Removendo entradas fora do padrão...
+Substituindo TG por GT...
+Tamanho df final: 1261
+</code></pre></div>
+<p><strong>Quarta Coluna</strong></p>
+<div class="highlight"><pre><span></span><code>Snp analisada: rs16891982
+GG         757
+missing    323
+CG         124
+CC          44
+
+Entradas fora do padrão: 
+Entradas iguais: [&#39;CG&#39;, &#39;GC&#39;]
+Removendo entradas fora do padrão...
+Substituindo GC por CG...
+Tamanho df final: 1261
+</code></pre></div>
+<p><strong>Quinta Coluna</strong></p>
+<div class="highlight"><pre><span></span><code>Snp analisada: rs1393350
+GG         634
+AG         401
+missing    147
+AA          73
+GA           5
+Name: rs1393350, dtype: int64
+
+Entradas fora do padrão: 
+Entradas iguais: [&#39;AG&#39;, &#39;GA&#39;]
+Removendo entradas fora do padrão...
+Substituindo GA por AG...
+Tamanho df final: 1261
+</code></pre></div>
+<p><strong>Sexta Coluna</strong></p>
+<div class="highlight"><pre><span></span><code>Snp analisada: rs12203592
+CC         794
+CT         221
+missing    148
+TC          59
+TT          38
+
+Entradas fora do padrão: 
+Entradas iguais: [&#39;CT&#39;, &#39;TC&#39;]
+Removendo entradas fora do padrão...
+Substituindo TC por CT...
+Tamanho df final: 1261
+</code></pre></div>
+<p><strong>Sétima Coluna</strong></p>
+<div class="highlight"><pre><span></span><code>Snp analisada: rs1129038
+TT         595
+CT         298
+CC         183
+TC         105
+missing     78
+
+Entradas fora do padrão: 
+Entradas iguais: [&#39;CT&#39;, &#39;TC&#39;]
+Removendo entradas fora do padrão...
+Substituindo TC por CT...
+Tamanho df final: 1261
+</code></pre></div>
+<p><strong>Oitava Coluna</strong></p>
+<div class="highlight"><pre><span></span><code>Snp analisada: rs116363232
+missing    1090
+CC          167
+CT            3
+
+Entradas fora do padrão: 
+Entradas iguais: [&#39; &#39;, &#39; &#39;]
+Removendo entradas fora do padrão...
+Substituindo   por  ...
+Tamanho df final: 1261
+</code></pre></div>
+<p><strong>Nona Coluna</strong></p>
+<div class="highlight"><pre><span></span><code>Snp analisada: rs1289399
+CC         460
+missing    429
+CT           3
+
+Entradas fora do padrão: 
+Entradas iguais: [&#39; &#39;, &#39; &#39;]
+Removendo entradas fora do padrão...
+Substituindo   por  ...
+Tamanho df final: 1261
+</code></pre></div>
+<h4 id="tratamento-de-valores-nulos">Tratamento de valores nulos<a class="headerlink" href="#tratamento-de-valores-nulos" title="Permanent link">&para;</a></h4>
+<p>Algumas entradas ainda têm valores nulos que não foram detectados no processo de aquisição dos dados, vamos trocar por "missing".</p>
+<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>rs12913832             1
+rs1800407              1
+rs12896399             1
+rs16891982             4
+rs1393350              1
+rs12203592             1
+rs1129038            369
+rs116363232            1
+rs1289399            369
+user_id                0
+genotype_filename      0
+Eye color              0
+color_cat              0
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">&quot;missing&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="analise-dos-dados">Análise dos Dados<a class="headerlink" href="#analise-dos-dados" title="Permanent link">&para;</a></h2>
+<p>Análise de proporção de valores faltantes em nossos atributos:</p>
+<details class="example">
+<summary>Código para Criação da Figura</summary>
+<div class="highlight"><pre><span></span><code><span class="n">c</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">print_values</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">print_values_position</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="n">x_label_rotation</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Dados Faltantes (em %)&#39;</span>
+<span class="n">c</span><span class="o">.</span><span class="n">x_labels</span> <span class="o">=</span> <span class="n">snp_list</span>
+<span class="n">c</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">&#39;Missing&#39;</span><span class="p">,</span> <span class="p">[</span><span class="nb">round</span><span class="p">((</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;missing&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">snp_list</span><span class="p">])</span>
+<span class="n">c</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">&#39;Not Missing&#39;</span><span class="p">,</span>  <span class="p">[</span><span class="nb">round</span><span class="p">((</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;missing&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)),</span> <span class="mi">2</span><span class="p">)</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">snp_list</span><span class="p">])</span>
+<span class="n">c</span><span class="o">.</span><span class="n">value_formatter</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="mi">100</span><span class="o">*</span><span class="n">x</span><span class="si">}</span><span class="s2">%&quot;</span>
+<span class="n">c</span><span class="o">.</span><span class="n">render_to_file</span><span class="p">(</span><span class="s1">&#39;missing.svg&#39;</span><span class="p">)</span>    
+<span class="n">pgr</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="s2">&quot;missing&quot;</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<object alt="Browser Evolution" data="../assets/eyecolor/missing.svg"></object>
+
+<p><strong>Remoção de atributos pouco úteis:</strong></p>
+<p>Devido à grande proporção de valores faltantes, as 3 últimas snps não serão muito úteis para predição e serão removidas.</p>
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">snp_list</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:])</span>
+</code></pre></div>
+<p><strong>Para entender melhor quais valores são mutações e quais são referência segue tabela descritiva das snps.</strong></p>
+<table>
+<thead>
+<tr>
+<th>SNP</th>
+<th>GENE</th>
+<th>Mutação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>rs12913832</strong></td>
+<td><strong>HERC2</strong></td>
+<td>Referência: AA, Presença 1: GA/AG, Presença 2: GG</td>
+</tr>
+<tr>
+<td><strong>rs1800407</strong></td>
+<td><strong>OCA2</strong></td>
+<td>Referência: CC, Presença 1: CT/TC, Presença 2: TT</td>
+</tr>
+<tr>
+<td><strong>rs12896399</strong></td>
+<td><strong>LOC105370627</strong></td>
+<td>Referência: GG, Presença 1: GT/TG, Presença 2: TT</td>
+</tr>
+<tr>
+<td><strong>rs16891982</strong></td>
+<td><strong>SLC45A2</strong></td>
+<td>Referência: CC, Presença 1: GC/CG, Presença 2: GG</td>
+</tr>
+<tr>
+<td><strong>rs1393350</strong></td>
+<td><strong>TYR</strong></td>
+<td>Referência: GG, Presença 1: GA/AG, Presença 2: AA</td>
+</tr>
+<tr>
+<td><strong>rs12203592</strong></td>
+<td><strong>IRF4</strong></td>
+<td>Referência: CC, Presença 1: CT/TA, Presença 2: CC</td>
+</tr>
+</tbody>
+</table>
+<h3 id="distribuicao-da-variavel-alvo-color_cat"><strong>Distribuição da Variável Alvo:</strong> <code>color_cat</code><a class="headerlink" href="#distribuicao-da-variavel-alvo-color_cat" title="Permanent link">&para;</a></h3>
+<details class="example">
+<summary>Código para Criação da Figura</summary>
+<div class="highlight"><pre><span></span><code><span class="n">labels</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;color_cat&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="n">values</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span>   <span class="nb">round</span><span class="p">(</span>  <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;color_cat&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">),</span> <span class="mi">4</span><span class="p">)</span> <span class="p">)</span> 
+<span class="n">c</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">print_values</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">print_values_position</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="n">x_label_rotation</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Categoria de Cor dos Olhos&#39;</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">labels</span><span class="p">)):</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="n">c</span><span class="o">.</span><span class="n">value_formatter</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="mi">100</span><span class="o">*</span><span class="n">x</span><span class="si">}</span><span class="s2">%&quot;</span>
+<span class="n">pgr</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="s2">&quot;color_count&quot;</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<object alt="Browser Evolution" data="../assets/eyecolor/color_count.svg"></object>
+
+<h3 id="distribuicao-das-features-snps"><strong>Distribuição das Features (snps):</strong><a class="headerlink" href="#distribuicao-das-features-snps" title="Permanent link">&para;</a></h3>
+<h4 id="contagem-total-e-contagem-segmentada-por-categoria-alvo"><strong>Contagem Total e Contagem segmentada por categoria alvo</strong><a class="headerlink" href="#contagem-total-e-contagem-segmentada-por-categoria-alvo" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">plot_contagem</span><span class="p">(</span><span class="n">col</span><span class="p">):</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">9</span><span class="p">))</span>
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Análise da SNP </span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s2"> .&quot;</span><span class="p">)</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span> <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;Blues_r&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Contagem total&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+
+    <span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span> <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">x</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;color_cat&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;Blues_r&quot;</span><span class="p">,</span> <span class="n">hue_order</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;BGG&quot;</span><span class="p">,</span> <span class="s2">&quot;Int&quot;</span><span class="p">,</span> <span class="s2">&quot;Brown&quot;</span><span class="p">])</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Contagem Segmentada&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">plot_contagem</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</code></pre></div>
+<p><img alt="Feature 1" src="../assets/eyecolor/dist1.png" /></p>
+<p><img alt="Feature 2" src="../assets/eyecolor/dist2.png" /></p>
+<p><img alt="Feature 3" src="../assets/eyecolor/dist3.png" /></p>
+<p><img alt="Feature 4" src="../assets/eyecolor/dist4.png" /></p>
+<p><img alt="Feature 5" src="../assets/eyecolor/dist5.png" /></p>
+<p><img alt="Feature 6" src="../assets/eyecolor/dist6.png" /></p>
+<h4 id="proporcao-da-variavel-alvo-por-classe-de-cada-atributo">Proporção da variável alvo por classe de cada atributo<a class="headerlink" href="#proporcao-da-variavel-alvo-por-classe-de-cada-atributo" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">snp</span> <span class="ow">in</span> <span class="n">snp_list</span><span class="p">[:</span><span class="o">-</span><span class="mi">3</span><span class="p">]:</span>
+
+    <span class="n">df_grouped</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;color_cat&quot;</span><span class="p">)[</span><span class="n">snp</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span>
+    <span class="n">df_grouped</span> <span class="o">=</span> <span class="n">df_grouped</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="n">x</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="n">df_grouped</span>
+
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Proporções para SNP </span><span class="si">{</span><span class="n">snp</span><span class="si">}</span><span class="s2"> em %.&quot;</span><span class="p">)</span>
+    <span class="c1">#fig.axes.get_yaxis().set_visible(False)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df_grouped</span><span class="o">.</span><span class="n">columns</span><span class="p">)):</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">df_grouped</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">x</span> <span class="o">=</span> <span class="n">df_grouped</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">df_grouped</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;Blues_r&quot;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">df_grouped</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>    
+        <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">get_yaxis</span><span class="p">()</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">containers</span><span class="p">:</span>
+            <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">bar_label</span><span class="p">(</span><span class="n">j</span><span class="p">,)</span>
+</code></pre></div>
+<p><img alt="Feature 1" src="../assets/eyecolor/prop1.png" /></p>
+<p><img alt="Feature 2" src="../assets/eyecolor/prop2.png" /></p>
+<p><img alt="Feature 3" src="../assets/eyecolor/prop3.png" /></p>
+<p><img alt="Feature 4" src="../assets/eyecolor/prop4.png" /></p>
+<p><img alt="Feature 5" src="../assets/eyecolor/prop5.png" /></p>
+<p><img alt="Feature 6" src="../assets/eyecolor/prop6.png" /></p>
+<h3 id="correlacoes-entre-as-variaveis">Correlações entre as Variáveis<a class="headerlink" href="#correlacoes-entre-as-variaveis" title="Permanent link">&para;</a></h3>
+<p>Foi utilizado One Hot Encoding pra transformar em as variáveis categóricas em numéricas e então explorar a correlação linear entre as variáveis com um Mapa de Calor das correlações de Pearson entre as variáveis.</p>
+<div class="highlight"><pre><span></span><code><span class="n">df_num</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">13</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">df_num</span><span class="o">.</span><span class="n">corr</span><span class="p">(),</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Blues&quot;</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Heat Map das correlações de Pearson entre as variáveis&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="Correlações" src="../assets/eyecolor/heatmap.png" /></p>
+<h2 id="baseline">Baseline<a class="headerlink" href="#baseline" title="Permanent link">&para;</a></h2>
+<p>Usando um simples classificador multiclasse do <code>xgboost</code> sem mexer no hiperparâmetros foram obtidos os seguintes resultados:</p>
+<p>Acurácia de treino: 80,57%</p>
+<p>Acurácia de teste: 72,42%</p>
+<p>Classification Report (Teste), </p>
+<div class="highlight"><pre><span></span><code>              precision    recall  f1-score   support
+
+           0       0.84      0.82      0.83       211
+           1       0.81      0.67      0.74       169
+           2       0.21      0.41      0.28        37
+
+    accuracy                           0.72       417
+   macro avg       0.62      0.63      0.62       417
+weighted avg       0.77      0.72      0.74       417
+</code></pre></div>
+<p>Onde 0 = "BGG", 1 = "Brown" e 2 = "Int".</p>
+<p>Mesmo sem um grande esforço de modelagem, foi possível encontrar resultados parecidos com o que se acha na literatura, inclusive com a mesma dificuldade: classificar cores intermediárias.</p>
+<p>Os códigos para esse projeto podem ser encontrados no <a href="https://github.com/GLETSONGIRAO/Phenotype_Prediction/tree/main/Phenotype_prediction_openSNP">Github</a></p>
+
+              
+            </article>
+            
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../eye_color/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Aquisição dos Dados" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Aquisição dos Dados
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Estatistica/" class="md-footer__link md-footer__link--next" aria-label="Next: Estatística" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Estatística
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/GLETSONGIRAO" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/gletsonbarreto" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/gletsonbarreto" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "header.autohide", "content.tabs.link", "navigation.instant"], "search": "../assets/javascripts/workers/search.85cb4492.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a877e258.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
