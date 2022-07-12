@@ -1,0 +1,1583 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/g.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>SQL - GleDocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#7e56c2">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i%7CSource+Code+Pro:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Source Sans Pro";--md-code-font:"Source Code Pro"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-purple" data-md-color-accent="amber">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introducao-ao-sql-mysql" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="GleDocs" class="md-header__button md-logo" aria-label="GleDocs" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GleDocs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SQL
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="GleDocs" class="md-nav__button md-logo" aria-label="GleDocs" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    GleDocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SobreMim/" class="md-nav__link">
+        Profissional
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Algoritmos Machine Learning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algoritmos Machine Learning" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Algoritmos Machine Learning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AprendizadoSupervisionado/" class="md-nav__link">
+        Aprendizado Supervisionado
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../regressaolinear/" class="md-nav__link">
+        Regressão Linear
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Machine Learning Engineering
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Machine Learning Engineering" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Machine Learning Engineering
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MLE/mle/" class="md-nav__link">
+        Machine Learning Engineering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MLE/MachineLearningDeploy/" class="md-nav__link">
+        Machine Learning em produção
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Desenvolvimento Web
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Desenvolvimento Web" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Desenvolvimento Web
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lan%C3%A7andoWebsite/" class="md-nav__link">
+        Publicando um Website
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos_web/" class="md-nav__link">
+        Fundamentos Web
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PYTHON/python_oop/" class="md-nav__link">
+        Programação Orientada a Objetos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          SQL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SQL" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          SQL
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          SQL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        SQL
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabela de Conteúdos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabela de Conteúdos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fundamentos-de-sql" class="md-nav__link">
+    Fundamentos de SQL
+  </a>
+  
+    <nav class="md-nav" aria-label="Fundamentos de SQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criando-um-banco-de-dados" class="md-nav__link">
+    Criando um Banco de dados
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-dados" class="md-nav__link">
+    Tipos de dados
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criando-uma-tabela" class="md-nav__link">
+    Criando uma Tabela
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collation-e-character-set" class="md-nav__link">
+    Collation e Character Set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inserindo-dados" class="md-nav__link">
+    Inserindo Dados
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querying" class="md-nav__link">
+    Querying
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deletando-dados" class="md-nav__link">
+    Deletando Dados
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    UPDATE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chave-primaria-e-indices" class="md-nav__link">
+    Chave Primária e Índices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alteracoes" class="md-nav__link">
+    Alterações
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alias" class="md-nav__link">
+    Alias
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distinct" class="md-nav__link">
+    DISTINCT
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EngenhariaDeSoftware/" class="md-nav__link">
+        Engenharia de Sofware
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Misc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Misc" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Misc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Conda/" class="md-nav__link">
+        Conda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Flask/" class="md-nav__link">
+        Flask
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../XGBoost/" class="md-nav__link">
+        XGBoost
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mkdocs/" class="md-nav__link">
+        Mkdocs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          Estatística
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Estatística" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Estatística
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Estatistica/" class="md-nav__link">
+        Estatística
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Probabilidade/" class="md-nav__link">
+        Probabilidade
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          DataViz
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="DataViz" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          DataViz
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyGal/" class="md-nav__link">
+        PyGal
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12">
+          Projetos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Projetos" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          Projetos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_12_1" type="checkbox" id="__nav_12_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12_1">
+          Phenotype Predicition
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Phenotype Predicition" data-md-level="2">
+        <label class="md-nav__title" for="__nav_12_1">
+          <span class="md-nav__icon md-icon"></span>
+          Phenotype Predicition
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PROJETOS/eye_color_pt1/" class="md-nav__link">
+        01 - Aquisição dos Dados
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PROJETOS/eye_color_pt2/" class="md-nav__link">
+        02 - Preparação e Análise
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PROJETOS/eye_color_pt3/" class="md-nav__link">
+        03 - Modelagem
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabela de Conteúdos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabela de Conteúdos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fundamentos-de-sql" class="md-nav__link">
+    Fundamentos de SQL
+  </a>
+  
+    <nav class="md-nav" aria-label="Fundamentos de SQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criando-um-banco-de-dados" class="md-nav__link">
+    Criando um Banco de dados
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-dados" class="md-nav__link">
+    Tipos de dados
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criando-uma-tabela" class="md-nav__link">
+    Criando uma Tabela
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collation-e-character-set" class="md-nav__link">
+    Collation e Character Set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inserindo-dados" class="md-nav__link">
+    Inserindo Dados
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querying" class="md-nav__link">
+    Querying
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deletando-dados" class="md-nav__link">
+    Deletando Dados
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    UPDATE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chave-primaria-e-indices" class="md-nav__link">
+    Chave Primária e Índices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alteracoes" class="md-nav__link">
+    Alterações
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alias" class="md-nav__link">
+    Alias
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distinct" class="md-nav__link">
+    DISTINCT
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="introducao-ao-sql-mysql">Introdução ao SQL (MySQL)<a class="headerlink" href="#introducao-ao-sql-mysql" title="Permanent link">&para;</a></h1>
+<h2 id="fundamentos-de-sql">Fundamentos de SQL<a class="headerlink" href="#fundamentos-de-sql" title="Permanent link">&para;</a></h2>
+<h3 id="criando-um-banco-de-dados">Criando um Banco de dados<a class="headerlink" href="#criando-um-banco-de-dados" title="Permanent link">&para;</a></h3>
+<p>Um banco de dados é um container que contém todas as tabelas. Uma tabela é um container para um subconjunto de dados. Uma tabela contém dados organizados em linhas e colunas. Uma coluna é uma parte dos dados que é um atributos de uma entidade. Uma linha é um conjunto de colunas que definem os atributos de uma entidade.</p>
+<p><strong>Sintaxe</strong></p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">MovieIndustry</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span>
+<span class="n">MovieIndustry</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p><code>SHOW DATABASES</code> irá listar todas as databases presentes no sistema.</p>
+<p>Podemos excluir uma database com o comando <code>DROP</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">DROP</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">MovieIndustry</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="tipos-de-dados">Tipos de dados<a class="headerlink" href="#tipos-de-dados" title="Permanent link">&para;</a></h3>
+<p>As principais categorias de tipos de dados são:</p>
+<ul>
+<li>Numéricos: INT, BIGINT, TINYINT, DECIMAL, etc.</li>
+<li>Tempo e Data: DATE, TIME, TIMESTAMP, YEAR, etc.</li>
+<li>String: VARCHAR, CHAR, ENUM, SET, BLOB, etc.</li>
+<li>JSON: JSON.</li>
+<li>Dados Espaciais: Representam localização, tamanho e forma de um objeto no planeta Terra. MySQL suporta tipos de dados espaciais como GEOMETRY, POINT, etc.</li>
+</ul>
+<p>Criando a Tabela <code>Actors</code> para <code>MovieIndustry</code>:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Nome da Coluna</th>
+<th align="center">Tipo da Coluna</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">FirstName</td>
+<td align="center">VARCHAR(20)</td>
+</tr>
+<tr>
+<td align="center">SecondName</td>
+<td align="center">VARCHAR(20)</td>
+</tr>
+<tr>
+<td align="center">DoB</td>
+<td align="center">DATE</td>
+</tr>
+<tr>
+<td align="center">Gender</td>
+<td align="center">ENUM('Male', 'Female', 'Other')</td>
+</tr>
+<tr>
+<td align="center">MaritalStatus</td>
+<td align="center">ENUM(‘Married’,‘Divorced’,‘Single’)</td>
+</tr>
+<tr>
+<td align="center">NetWorthInMilions</td>
+<td align="center">DECIMAL</td>
+</tr>
+</tbody>
+</table>
+<h3 id="criando-uma-tabela">Criando uma Tabela<a class="headerlink" href="#criando-uma-tabela" title="Permanent link">&para;</a></h3>
+<p><strong>Sintaxe</strong></p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">tableName</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="w"></span>
+<span class="n">col1</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Restrictions</span><span class="o">&gt;</span><span class="p">,</span><span class="w"></span>
+<span class="n">col2</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Restrictions</span><span class="o">&gt;</span><span class="p">,</span><span class="w"></span>
+<span class="n">col3</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Restrictions</span><span class="w"></span>
+<span class="o">&lt;</span><span class="k">Primary</span><span class="w"> </span><span class="k">Key</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="k">Index</span><span class="w"> </span><span class="n">definitions</span><span class="o">&gt;</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>Criando a tabela <code>Actors</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Actors</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="n">FirstName</span><span class="w"> </span><span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span><span class="w"></span>
+<span class="n">SecondName</span><span class="w"> </span><span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span><span class="w"></span>
+<span class="n">DoB</span><span class="w"> </span><span class="kt">DATE</span><span class="p">,</span><span class="w"></span>
+<span class="n">Gender</span><span class="w"> </span><span class="kt">ENUM</span><span class="p">(</span><span class="s1">&#39;Male&#39;</span><span class="p">,</span><span class="s1">&#39;Female&#39;</span><span class="p">,</span><span class="s1">&#39;Other&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="n">MaritalStatus</span><span class="w"> </span><span class="kt">ENUM</span><span class="p">(</span><span class="s1">&#39;Married&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Divorced&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Single&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="n">NetWorthInMillions</span><span class="w"> </span><span class="kt">DECIMAL</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p><code>SHOW TABLES;</code> mostra que a tabela foi criada.</p>
+<p><code>DESC Actors;</code> mostra as informações da tabela.</p>
+<p><strong>Sintaxe completa para definir uma coluna:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">columnName</span><span class="w"> </span><span class="n">columnType</span><span class="w"> </span><span class="err">[</span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="no">NULL</span><span class="err">]</span><span class="w"> </span><span class="err">[</span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">columnValue</span><span class="err">]</span><span class="w"></span>
+</code></pre></div>
+<h4 id="criando-tabela-com-restricoes"><strong>Criando tabela com restrições</strong><a class="headerlink" href="#criando-tabela-com-restricoes" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Actors</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="n">Id</span><span class="w"> </span><span class="kt">INT</span><span class="w"> </span><span class="k">AUTO_INCREMENT</span><span class="p">,</span><span class="w"></span>
+<span class="n">FirstName</span><span class="w"> </span><span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="p">,</span><span class="w"></span>
+<span class="n">SecondName</span><span class="w"> </span><span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="p">,</span><span class="w"></span>
+<span class="n">DoB</span><span class="w"> </span><span class="kt">DATE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="p">,</span><span class="w"></span>
+<span class="n">Gender</span><span class="w"> </span><span class="kt">ENUM</span><span class="p">(</span><span class="s1">&#39;Male&#39;</span><span class="p">,</span><span class="s1">&#39;Female&#39;</span><span class="p">,</span><span class="s1">&#39;Other&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="p">,</span><span class="w"></span>
+<span class="n">MaritalStatus</span><span class="w"> </span><span class="kt">ENUM</span><span class="p">(</span><span class="s1">&#39;Married&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Divorced&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Single&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Unknown&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s2">&quot;Unknown&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="n">NetWorthInMillions</span><span class="w"> </span><span class="kt">DECIMAL</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="p">,</span><span class="w"></span>
+<span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">Id</span><span class="p">));</span><span class="w"></span>
+</code></pre></div>
+<p>A coluna ID é a chave primária que identifica unicamente cada ator, e está atribuída com a feature <code>AUTO_INCREMENT</code> do MySQL, onde a primeira linha inicia em 1 e cada linha posterior será incrementada em 1.</p>
+<h4 id="criando-tabela-temporaria">Criando Tabela Temporária<a class="headerlink" href="#criando-tabela-temporaria" title="Permanent link">&para;</a></h4>
+<p>Com MySQL é possível criar tabelas temporárias. Tabelas temporárias são persistidas pela duração da sessão e são removidas ao fim da sessão. Não é necessário que o usuário apague a tabela.</p>
+<p><strong>Sintaxe:</strong> <code>CREATE TEMPORARY TABLE tableName (...)</code></p>
+<h3 id="collation-e-character-set">Collation e Character Set<a class="headerlink" href="#collation-e-character-set" title="Permanent link">&para;</a></h3>
+<p>Uma database pode conter caracteres de diversos idioma.</p>
+<p>Os conjuntos de caracteres disponíveis no servidor pode ser listado com o comando: <code>SHOW CHARACTER SET;</code></p>
+<p>Também podemos listar Collations: <code>SHOW COLLATION;</code></p>
+<h3 id="inserindo-dados">Inserindo Dados<a class="headerlink" href="#inserindo-dados" title="Permanent link">&para;</a></h3>
+<p>Podemos inserir dados em uma tabela usando o comando <code>INSERT</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="p">(</span><span class="n">col1</span><span class="p">,</span><span class="w"> </span><span class="n">col2</span><span class="w"> </span><span class="n">…</span><span class="w"> </span><span class="n">coln</span><span class="p">)</span><span class="w"></span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="n">val1</span><span class="p">,</span><span class="w"> </span><span class="n">val2</span><span class="p">,</span><span class="w"> </span><span class="n">…</span><span class="w"> </span><span class="n">valn</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>Inserindo uma linha:</p>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Actors</span><span class="w"> </span><span class="p">(</span><span class="w"> </span>
+<span class="n">FirstName</span><span class="p">,</span><span class="w"> </span><span class="n">SecondName</span><span class="p">,</span><span class="w"> </span><span class="n">DoB</span><span class="p">,</span><span class="w"> </span><span class="n">Gender</span><span class="p">,</span><span class="w"> </span><span class="n">MaritalStatus</span><span class="p">,</span><span class="w"> </span><span class="n">NetworthInMillions</span><span class="p">)</span><span class="w"> </span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;Brad&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Pitt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;1963-12-18&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Male&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Single&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">240.00</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>Inserindo Múltiplas Linhas:</p>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Actors</span><span class="w"> </span><span class="p">(</span><span class="w"> </span>
+<span class="n">FirstName</span><span class="p">,</span><span class="w"> </span><span class="n">SecondName</span><span class="p">,</span><span class="w"> </span><span class="n">DoB</span><span class="p">,</span><span class="w"> </span><span class="n">Gender</span><span class="p">,</span><span class="w"> </span><span class="n">MaritalStatus</span><span class="p">,</span><span class="w"> </span><span class="n">NetworthInMillions</span><span class="p">)</span><span class="w"> </span>
+<span class="k">VALUES</span><span class="w"> </span>
+<span class="p">(</span><span class="s2">&quot;Jennifer&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Aniston&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;1969-11-02&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Female&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Single&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">240.00</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="s2">&quot;Angelina&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Jolie&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;1975-06-04&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Female&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Single&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100.00</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="s2">&quot;Johnny&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Depp&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;1963-06-09&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Male&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Single&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">200.00</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>Também podemos pular o nome das colunas e ir diretamente para os valores:</p>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Actors</span><span class="w"> </span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="k">DEFAULT</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Dream&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Actress&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;9999-01-01&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Female&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Single&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">000.00</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>Inserir Linha com todos os valores nulos:</p>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Actors</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">();</span><span class="w"></span>
+</code></pre></div>
+<p>Usando a sintaxe de <code>SET</code> para agrupar pares Coluna e Valor:</p>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Actors</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">DoB</span><span class="o">=</span><span class="s2">&quot;1950-12-12&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">FirstName</span><span class="o">=</span><span class="s2">&quot;Rajnikanth&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">SecondName</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w">  </span><span class="n">Gender</span><span class="o">=</span><span class="s2">&quot;Male&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">NetWorthInMillions</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span><span class="w">  </span><span class="n">MaritalStatus</span><span class="o">=</span><span class="s2">&quot;Married&quot;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="querying">Querying<a class="headerlink" href="#querying" title="Permanent link">&para;</a></h3>
+<p>Usamos o comando <code>SELECT</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">col1</span><span class="p">,</span><span class="w"> </span><span class="n">col2</span><span class="p">,</span><span class="w"> </span><span class="n">…</span><span class="w"> </span><span class="n">coln</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">table</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="o">&lt;</span><span class="k">condition</span><span class="o">&gt;</span><span class="w"></span>
+</code></pre></div>
+<p>Selecionando <strong>todas</strong> as linhas de colunas: <code>*</code></p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">Actors</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Selecionando <strong>colunas</strong>: <code>SELECT &lt;columns&gt; FROM &lt;TableName&gt;</code></p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">FirstName</span><span class="p">,</span><span class="w"> </span><span class="n">SecondName</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">Actors</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Filtrando linhas de acordo com condições: cláusula <code>WHERE</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">FirstName</span><span class="p">,</span><span class="w"> </span><span class="n">SecondName</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">Actors</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">NetWorthInMillions</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">500</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h4 id="operadores-que-podem-ser-usados-com-where">Operadores que podem ser usados com WHERE<a class="headerlink" href="#operadores-que-podem-ser-usados-com-where" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th align="center">Operator</th>
+<th align="center">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">&gt;</td>
+<td align="center">Greater than operator</td>
+</tr>
+<tr>
+<td align="center">&gt;=</td>
+<td align="center">Greater than or equal to operator</td>
+</tr>
+<tr>
+<td align="center">&lt;</td>
+<td align="center">Less than operator</td>
+</tr>
+<tr>
+<td align="center">&lt;=</td>
+<td align="center">Less than or equal to operator</td>
+</tr>
+<tr>
+<td align="center">!=</td>
+<td align="center">Not equal operator</td>
+</tr>
+<tr>
+<td align="center">&lt;&gt;</td>
+<td align="center">Not equal operator</td>
+</tr>
+<tr>
+<td align="center">&lt;=&gt;</td>
+<td align="center">NULL-safe equal to operator</td>
+</tr>
+<tr>
+<td align="center">=</td>
+<td align="center">Equal to operator</td>
+</tr>
+<tr>
+<td align="center">BETWEEN … AND …</td>
+<td align="center">Whether a value is within a range of values</td>
+</tr>
+<tr>
+<td align="center">COALESCE()</td>
+<td align="center">Return the first non-NULL argument</td>
+</tr>
+<tr>
+<td align="center">GREATEST()</td>
+<td align="center">Return the largest argument</td>
+</tr>
+<tr>
+<td align="center">IN</td>
+<td align="center">Whether a value is within a set of values</td>
+</tr>
+<tr>
+<td align="center">INTERVAL</td>
+<td align="center">Return the index of the argument that is less than the first argument</td>
+</tr>
+<tr>
+<td align="center">IS</td>
+<td align="center">Test a value against a boolean</td>
+</tr>
+<tr>
+<td align="center">IS NOT</td>
+<td align="center">Test a value against a boolean</td>
+</tr>
+<tr>
+<td align="center">IS NOT NULL</td>
+<td align="center">NOT NULL value test</td>
+</tr>
+<tr>
+<td align="center">IS NULL</td>
+<td align="center">NULL value test</td>
+</tr>
+<tr>
+<td align="center">ISNULL()</td>
+<td align="center">Test whether the argument is NULL</td>
+</tr>
+<tr>
+<td align="center">LEAST()</td>
+<td align="center">Return the smallest argument</td>
+</tr>
+<tr>
+<td align="center">LIKE</td>
+<td align="center">Simple pattern matching</td>
+</tr>
+<tr>
+<td align="center">NOT BETWEEN … AND …</td>
+<td align="center">Whether a value is not within a range of values</td>
+</tr>
+<tr>
+<td align="center">NOT IN()</td>
+<td align="center">Whether a value is not within a set of values</td>
+</tr>
+<tr>
+<td align="center">NOT LIKE</td>
+<td align="center">Negation of simple pattern matching</td>
+</tr>
+<tr>
+<td align="center">STRCMP()</td>
+<td align="center">Compare two strings</td>
+</tr>
+</tbody>
+</table>
+<h4 id="operador-like">Operador Like<a class="headerlink" href="#operador-like" title="Permanent link">&para;</a></h4>
+<p>Um dos operadores que podem ser usados com a cláusula WHERE. O operador <code>LIKE</code> nos permite recuperar linhas em baseado em uma correspondência de padrão para alguma coluna.</p>
+<p><strong>Sintaxe:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">col1</span><span class="p">,</span><span class="w"> </span><span class="n">col2</span><span class="p">,</span><span class="w"> </span><span class="n">…</span><span class="w"> </span><span class="n">coln</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">table</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">col3</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s2">&quot;%string%&quot;</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Exemplo:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">Actors</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">FirstName</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s2">&quot;Jen%&quot;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<ul>
+<li>O símbolo <code>%</code> é um wildcard que corresponde a 0 ou mais caracteres.</li>
+<li><code>_</code> corresponde a exatamente 1 caractere.</li>
+</ul>
+<p>A cláusula <code>LIKE</code> também pode ser usadas com comandos SQL diferentes de SELECT.</p>
+<div class="highlight"><pre><span></span><code><span class="k">SHOW</span><span class="w"> </span><span class="k">DATABASES</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s2">&quot;M%&quot;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h4 id="combinando-condicoes">Combinando Condições<a class="headerlink" href="#combinando-condicoes" title="Permanent link">&para;</a></h4>
+<p>Podem ser combinadas múltiplas condições com <code>WHERE</code> usando operadores como <code>AND</code> e <code>OR</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">col1</span><span class="p">,</span><span class="w"> </span><span class="n">col2</span><span class="p">,</span><span class="w"> </span><span class="n">…</span><span class="w"> </span><span class="n">coln</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">table</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">col3</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s2">&quot;%some-string%&quot;</span><span class="w"></span>
+<span class="k">AND</span><span class="w"></span>
+<span class="n">col4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">55</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Exemplo:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Actors</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">FirstName</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="s2">&quot;B&quot;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">NetWorthInMillions</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Combinando Operador <code>AND</code> e operador <code>OR</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Actors</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">FirstName</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="s1">&#39;B&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">FirstName</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="s1">&#39;J&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="p">(</span><span class="n">SecondName</span><span class="w"> </span><span class="o">&gt;</span><span class="s1">&#39;I&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">SecondName</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="s1">&#39;K&#39;</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<h4 id="order-by">ORDER BY<a class="headerlink" href="#order-by" title="Permanent link">&para;</a></h4>
+<p>A cláusula <code>ORDER BY</code> ordena as linhas da consulta, em ordem decrescente <code>DESC</code> ou crescente <code>ASC</code>.</p>
+<p><strong>Sintaxe:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">col1</span><span class="p">,</span><span class="w"> </span><span class="n">col2</span><span class="p">,</span><span class="w"> </span><span class="n">…</span><span class="w"> </span><span class="n">coln</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">table</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">col3</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s2">&quot;%some-string%&quot;</span><span class="w"></span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">col3</span><span class="w"></span>
+</code></pre></div>
+<p>Exemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Actors</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">NetWorthInMillions</span><span class="w"> </span><span class="k">DESC</span><span class="p">,</span><span class="w"> </span><span class="n">FirstName</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h4 id="limit">LIMIT<a class="headerlink" href="#limit" title="Permanent link">&para;</a></h4>
+<p>Tabelas no mundo real frequentemente têm milhões de linhas. Consultas podem retornar muitas linhas, o que pode ser problemático para o desempenho do banco de dados. A cláusula <code>LIMIT</code> nos permite restringir o número de linhas retornadas em uma consulta.</p>
+<p><strong>Sintaxe</strong></p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">col1</span><span class="p">,</span><span class="w"> </span><span class="n">col2</span><span class="p">,</span><span class="w"> </span><span class="n">…</span><span class="w"> </span><span class="n">coln</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">table</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">col3</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s2">&quot;%some-string%&quot;</span><span class="w"></span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">col3</span><span class="w"></span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Exemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">FirstName</span><span class="p">,</span><span class="w"> </span><span class="n">SecondName</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">Actors</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">NetWorthInMillions</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>A palavra chave <code>OFFSET</code> retorna a quantidade limite de linhas que estão situadas após a quantidade determinada pelo OFFSET.</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">FirstName</span><span class="p">,</span><span class="w"> </span><span class="n">SecondName</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">Actors</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">NetWorthInMillions</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="k">OFFSET</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="c1"># ou</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">FirstName</span><span class="p">,</span><span class="w"> </span><span class="n">SecondName</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">Actors</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">NetWorthInMillions</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">LIMIT</span><span class="w"> </span><span class="o">&lt;</span><span class="k">offset</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="o">&lt;</span><span class="n">number_of_row_to_print</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="deletando-dados">Deletando Dados<a class="headerlink" href="#deletando-dados" title="Permanent link">&para;</a></h3>
+<p><code>DELETE</code> pode ser usado para deletar dados de uma tabela de acordo com uma consulta específica.</p>
+<p><strong>Sintaxe</strong></p>
+<div class="highlight"><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">col3</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">col1</span><span class="w"></span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Para deletar todas as linhas de uma tabela pode ser usado <code>TRUNCATE</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">TRUNCATE</span><span class="w"> </span><span class="k">table</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="update">UPDATE<a class="headerlink" href="#update" title="Permanent link">&para;</a></h3>
+<p><code>UPDATE</code> pode ser usado para mudar os valores de uma ou mais linhas e colunas.</p>
+<p><strong>Sintaxe</strong></p>
+<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="k">table</span><span class="w"></span>
+<span class="k">SET</span><span class="w"> </span><span class="n">col1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">val1</span><span class="p">,</span><span class="w"> </span><span class="n">col2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">val2</span><span class="p">,</span><span class="w"> </span><span class="n">…</span><span class="w"> </span><span class="n">coln</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valn</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="o">&lt;</span><span class="k">condition</span><span class="o">&gt;</span><span class="w"></span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">col5</span><span class="w"></span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="chave-primaria-e-indices">Chave Primária e Índices<a class="headerlink" href="#chave-primaria-e-indices" title="Permanent link">&para;</a></h3>
+<p>Sempre que uma consulta que contém a cláusula <code>WHERE</code> feita, o MySQL tem que fazer um escaneamento completo da tabela para achar as linhas correspondente. Uma escaneamento linear de uma tabela não é muito eficiente. </p>
+<p>Adicionar um índice para a tabela pode aumentar a velocidade da procura significativamente. O propósito principal de um índice é fornecer uma representação ordenada dos dados indexados.</p>
+<h4 id="indice-clusterizado">Índice Clusterizado<a class="headerlink" href="#indice-clusterizado" title="Permanent link">&para;</a></h4>
+<p>Quando inserimos linhas em uma tabela, elas são escritas no mídia de armazeno físico, tal como no HD. No caso de índice clusterizado, as linhas são ordenadas e mantidas em uma estrutura de B-tree (ou R-Tree no caso de índice espacial). </p>
+<p>O arranjo físico das linhas no disco mimetiza a ordem lógica definida pelo índice. Não existe estrutura de dados separada que mantém as linhas da tabela. É uma forma de informar ao sistema de banco de dados para agrupar valores fisicamente próximos uns aos outros no disco que estão próximos no índice.</p>
+<p>B-trees e a versão modificada B+ trees, são estruturas de dados comuns usadas para armazenar dados em discos. Tabelas muito grandes não cabem na memória principal do computador e apenas porções de tais tabelas são trazidas do disco rígido para a memória principal. A procura pelos dados requisitados se torna mais fácil com B-trees pois elas garantem um número fixo de leituras, já que B-trees são balanceadas.</p>
+<p>Em B+ trees, os dados são armazenados em nós folha. A raiz e os nós internos contém a chave pela qual a B+ tree é ordenada.</p>
+<p>MySQL armazena dados em uma entidade chamada <strong>page</strong>. Uma page é a menor unidade de dados que uma database pode escrever ou ou ler de um disco. Uma page contém linhas e forma o nó folha da B+ tree.</p>
+<p>Em MySQL o tamanho padrão de uma page é 16kb, porém é configurável. </p>
+<p>Uma coleção de pages forma um <strong>extent</strong> e uma coleção de extents forma um <strong>segment</strong>. Segments formam um tablespace. Existe um tablespace chamado <strong>system tablespace</strong>,</p>
+<h3 id="alteracoes">Alterações<a class="headerlink" href="#alteracoes" title="Permanent link">&para;</a></h3>
+<p>Podemos alterar entidades: renomear tabelas, adicionar, remover ou renomear colunas, mudar o tipo de uma coluna existente, etc.</p>
+<p><strong>Sintaxe</strong></p>
+<div class="highlight"><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">table</span><span class="w"></span>
+<span class="k">CHANGE</span><span class="w"> </span><span class="n">oldColumnName</span><span class="w"> </span><span class="n">newColumnName</span><span class="w"> </span><span class="o">&lt;</span><span class="n">datatype</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">restrictions</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Actors</span><span class="w"> </span><span class="k">CHANGE</span><span class="w"> </span><span class="n">FirstName</span><span class="w"> </span><span class="n">First_Name</span><span class="w"> </span><span class="kt">varchar</span><span class="p">(</span><span class="mi">120</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>Podemos usar <code>MODIFY</code> para alterar o tipo ou as cláusulas de uma coluna.</p>
+<div class="highlight"><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Actors</span><span class="w"> </span><span class="k">MODIFY</span><span class="w"> </span><span class="n">First_Name</span><span class="w"> </span><span class="kt">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s2">&quot;Anonymous&quot;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Também <code>CHANGE</code>, mas o nome da coluna deve ser repetido duas vezes se não for renomear a coluna.</p>
+<div class="highlight"><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Actors</span><span class="w"> </span><span class="k">CHANGE</span><span class="w"> </span><span class="n">First_Name</span><span class="w"> </span><span class="n">First_Name</span><span class="w"> </span><span class="kt">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s2">&quot;Anonymous&quot;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p><code>ADD</code> para adicionar uma coluna. <code>AFTER</code> ou <code>FIRST</code> para escolher a posição.</p>
+<div class="highlight"><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Actors</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="n">MiddleName</span><span class="w"> </span><span class="kt">varchar</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">FIRST</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Adicionar índices</strong> com <code>ADD INDEX</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">table</span><span class="w"></span>
+<span class="k">ADD</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">indexName</span><span class="w"> </span><span class="p">(</span><span class="n">col1</span><span class="p">,</span><span class="w"> </span><span class="n">col2</span><span class="p">,</span><span class="w"> </span><span class="n">…</span><span class="w"> </span><span class="n">coln</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Limitando o índice em 10 caracteres</span><span class="w"></span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Actors</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">nameIndexWithOnlyTenChars</span><span class="w"> </span><span class="p">(</span><span class="n">FirstName</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span><span class="w"></span>
+</code></pre></div>
+<h3 id="alias">Alias<a class="headerlink" href="#alias" title="Permanent link">&para;</a></h3>
+<p>Alies é um "apelido", um nome temporário que substitui o nome de uma tabela ou coluna para ajudar a escrever consultas mais legíveis. Podemos usar alias com colunas, tabelas e funções MySQL.</p>
+<p><strong>Sintaxe</strong></p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">col1</span><span class="w"></span>
+<span class="k">AS</span><span class="w"> </span><span class="n">aliasCol1</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">table</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Exemplo Funções</strong></p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="nf">CONCAT</span><span class="p">(</span><span class="n">FirstName</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">SecondName</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">FullName</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Actors</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Exemplo Tabela</strong></p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">FirstName</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Actors</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">tbl</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">tbl</span><span class="p">.</span><span class="n">FirstName</span><span class="o">=</span><span class="s1">&#39;Brad&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">tbl</span><span class="p">.</span><span class="n">NetWorthInMillions</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">FirstName</span><span class="p">,</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">NetworthInMillions</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Actors</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">t1</span><span class="p">,</span><span class="w"></span>
+<span class="n">Actors</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">t2</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">NetworthInMillions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="n">NetworthInMillions</span><span class="w"></span>
+<span class="k">AND</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">Id</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="n">Id</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="distinct">DISTINCT<a class="headerlink" href="#distinct" title="Permanent link">&para;</a></h3>
+<p>Retorna as linhas únicas em uma consulta.</p>
+<p><code>DISTINCT</code> é um filtro pós processamento, é aplicado após o resultado de uma consulta.</p>
+
+              
+            </article>
+            
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../../PYTHON/python_oop/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Programação Orientada a Objetos" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Programação Orientada a Objetos
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../EngenhariaDeSoftware/" class="md-footer__link md-footer__link--next" aria-label="Next: Engenharia de Sofware" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Engenharia de Sofware
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/GLETSONGIRAO" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/gletsonbarreto" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/gletsonbarreto" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "header.autohide", "content.tabs.link", "navigation.instant"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

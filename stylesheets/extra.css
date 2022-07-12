@@ -9,14 +9,16 @@
     width: 70%;
     display: block;
     margin: auto;
-
 }
 
 g {
     width: 50%;
     display: block;
     margin: auto;
+}
 
+.arithmatex, mjx-math {
+    color: #082986;
 }
 
 .md-footer__inner:not([hidden]) {
