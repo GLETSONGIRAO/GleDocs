@@ -1233,8 +1233,7 @@ color_cat              0
 <span class="n">pgr</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="s2">&quot;missing&quot;</span><span class="p">)</span>
 </code></pre></div>
 </details>
-<object alt="Browser Evolution" data="../assets/eyecolor/missing.svg"></object>
-
+<p><img alt="Missing Data" src="../../assets/eyecolor/missing.png" /></p>
 <p><strong>Remoção de atributos pouco úteis:</strong></p>
 <p>Devido à grande proporção de valores faltantes, as 3 últimas snps não serão muito úteis para predição e serão removidas.</p>
 <div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">snp_list</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:])</span>
@@ -1294,8 +1293,7 @@ color_cat              0
 <span class="n">pgr</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="s2">&quot;color_count&quot;</span><span class="p">)</span>
 </code></pre></div>
 </details>
-<object alt="Browser Evolution" data="../assets/eyecolor/color_count.svg"></object>
-
+<p><img alt="Color Dist" src="../../assets/eyecolor/color_count.png" /></p>
 <h3 id="distribuicao-das-features-snps"><strong>Distribuição das Features (snps):</strong><a class="headerlink" href="#distribuicao-das-features-snps" title="Permanent link">&para;</a></h3>
 <h4 id="contagem-total-e-contagem-segmentada-por-categoria-alvo"><strong>Contagem Total e Contagem segmentada por categoria alvo</strong><a class="headerlink" href="#contagem-total-e-contagem-segmentada-por-categoria-alvo" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">plot_contagem</span><span class="p">(</span><span class="n">col</span><span class="p">):</span>
